@@ -1,24 +1,12 @@
-THEORY ProofList IS
-_f(1) & _f(2) & _f(3) & Operation_test_compute_enabling.2,(_f(4) & _f(5) & _f(6) & _f(7) & _f(8) & _f(10) & _f(11) => _f(13));
-_f(1) & _f(2) & _f(3) & Operation_test_compute_enabling.1,(_f(4) & _f(5) & _f(6) & _f(7) & _f(8) & _f(9) & _f(11) => _f(12))
+THEORY ProofList
 END
 &
-THEORY Formulas IS
-((NAT) = (((0) .. (2147483647)))) & ((INT) = (((-2147483647) .. (2147483647))));
-((1..3)*{PRESSURES}): FIN(NATURAL*{PRESSURES})& not(((1..3)*{PRESSURES}) = {});
-((pressure_sensor_l$1) : (((1..3)*{PRESSURES}))) & ((contact_sensor_a$1) : (BOOL)) & ((contact_sensor_b$1) : (BOOL)) & ((enable_door_a$1) : (BOOL)) & ((enable_door_b$1) : (BOOL)) & ((((enable_door_a$1) = (TRUE))) => (((enable_door_b$1) = (FALSE)))) & ((((enable_door_b$1) = (TRUE))) => (((enable_door_a$1) = (FALSE))));
-((pressure) : (((1..3)*{PRESSURES})));
-((contactA) : (BOOL));
-((contactB) : (BOOL));
-((((contactA) = (FALSE))) => (((contactB) = (TRUE)) & ((pressure) = ((1|->PRESSURES)))));
-((((contactB) = (FALSE))) => (((contactA) = (TRUE)) & ((pressure) = ((2|->PRESSURES)))));
-not(((pressure) = ((1|->PRESSURES))));
-not(((pressure) = ((2|->PRESSURES))));
-"Precondition predicate";
-((contactA) = (TRUE));
-((contactB) = (TRUE))
+THEORY Formulas
 END
 &
 THEORY EnumerateX IS
+ACTIONS == {NONE,TRANSLATE_OPEN_DOOR_A,TRANSLATE_OPEN_DOOR_B,TRANSLATE_CLOSE_DOOR_A,TRANSLATE_CLOSE_DOOR_B,ADAPT_PRESSURE_L_TO_A,ADAPT_PRESSURE_L_TO_B};
+AUTHENTICATED == {AUTHENTICATED_A,AUTHENTICATED_L,AUTHENTICATED_B,AUTHENTICATED_NONE};
+OBJECTIVES == {OBJ_OPEN_DOOR_A,OBJ_OPEN_DOOR_B,OBJ_NONE};
 PRESSURES == {PRESSURE_A,PRESSURE_B,PRESSURE_OTHER}
 END

@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Machine xmlns='https://www.atelierb.eu/Formats/bxml' version='1.0' name='test_CONTROLLER_i' type='implementation' position='true' semantic='true' b0check='false'>
+<Abstraction>test_CONTROLLER</Abstraction>
+<Imports>
+<Attr>
+<Pos l='4' c='1' s='7'/>
+</Attr>
+<Referenced_Machine>
+<Attr>
+<Pos l='4' c='9' s='3'/>
+</Attr>
+<Name>CTX</Name>
+</Referenced_Machine>
+<Referenced_Machine>
+<Attr>
+<Pos l='4' c='14' s='7'/>
+</Attr>
+<Name>SENSORS</Name>
+</Referenced_Machine>
+<Referenced_Machine>
+<Attr>
+<Pos l='4' c='23' s='7'/>
+</Attr>
+<Name>ENABLER</Name>
+</Referenced_Machine>
+<Referenced_Machine>
+<Attr>
+<Pos l='4' c='32' s='10'/>
+</Attr>
+<Name>CONTROLLER</Name>
+</Referenced_Machine>
+</Imports>
+<Initialisation>
+<Skip/>
+</Initialisation>
+<Operations>
+<Operation name='test_control'>
+<Attr>
+<Pos l='6' c='5' s='12' endLine='12'/>
+</Attr>
+<Body>
+<Nary_Sub op=';'>
+<Operation_Call>
+<Attr>
+<Pos l='8' c='9' s='21'/>
+</Attr>
+<Name>
+<Id value='update_sensors_states'>
+<Attr>
+<Pos l='8' c='9' s='21'/>
+</Attr>
+</Id>
+</Name>
+</Operation_Call>
+<Operation_Call>
+<Attr>
+<Pos l='9' c='9' s='15'/>
+</Attr>
+<Name>
+<Id value='process_readers'>
+<Attr>
+<Pos l='9' c='9' s='15'/>
+</Attr>
+</Id>
+</Name>
+</Operation_Call>
+<Operation_Call>
+<Attr>
+<Pos l='10' c='9' s='7'/>
+</Attr>
+<Name>
+<Id value='control'>
+<Attr>
+<Pos l='10' c='9' s='7'/>
+</Attr>
+</Id>
+</Name>
+</Operation_Call>
+<Operation_Call>
+<Attr>
+<Pos l='11' c='9' s='16'/>
+</Attr>
+<Name>
+<Id value='compute_enabling'>
+<Attr>
+<Pos l='11' c='9' s='16'/>
+</Attr>
+</Id>
+</Name>
+</Operation_Call>
+</Nary_Sub>
+</Body>
+</Operation>
+</Operations>
+<TypeInfos>
+<Type id='0'>
+<Id value='BOOL'/>
+</Type>
+<Type id='1'>
+<Id value='INTEGER'/>
+</Type>
+<Type id='2'>
+<Unary_Exp op='POW'>
+<Id value='INTEGER'/>
+</Unary_Exp>
+</Type>
+<Type id='3'>
+<Unary_Exp op='POW'>
+<Unary_Exp op='POW'>
+<Id value='INTEGER'/>
+</Unary_Exp>
+</Unary_Exp>
+</Type>
+</TypeInfos>
+
+</Machine>

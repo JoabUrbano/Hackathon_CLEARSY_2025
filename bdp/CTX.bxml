@@ -2,28 +2,125 @@
 <Machine xmlns='https://www.atelierb.eu/Formats/bxml' version='1.0' name='CTX' type='abstraction' position='true' semantic='true' b0check='false'>
 <Sets>
 <Attr>
-<Pos l='4' c='1' s='4'/>
+<Pos l='3' c='1' s='4'/>
 </Attr>
 <Set>
 <Id value='PRESSURES' typref='4'>
 <Attr>
-<Pos l='5' c='5' s='9'/>
+<Pos l='4' c='5' s='9'/>
 </Attr>
 </Id>
 <Enumerated_Values>
 <Id value='PRESSURE_A' typref='5'>
 <Attr>
-<Pos l='6' c='9' s='10'/>
+<Pos l='5' c='9' s='10'/>
 </Attr>
 </Id>
 <Id value='PRESSURE_B' typref='5'>
 <Attr>
-<Pos l='7' c='9' s='10'/>
+<Pos l='6' c='9' s='10'/>
 </Attr>
 </Id>
 <Id value='PRESSURE_OTHER' typref='5'>
 <Attr>
-<Pos l='8' c='9' s='14'/>
+<Pos l='7' c='9' s='14'/>
+</Attr>
+</Id>
+</Enumerated_Values>
+</Set>
+<Set>
+<Id value='OBJECTIVES' typref='6'>
+<Attr>
+<Pos l='9' c='5' s='10'/>
+</Attr>
+</Id>
+<Enumerated_Values>
+<Id value='OBJ_OPEN_DOOR_A' typref='7'>
+<Attr>
+<Pos l='10' c='9' s='15'/>
+</Attr>
+</Id>
+<Id value='OBJ_OPEN_DOOR_B' typref='7'>
+<Attr>
+<Pos l='11' c='9' s='15'/>
+</Attr>
+</Id>
+<Id value='OBJ_NONE' typref='7'>
+<Attr>
+<Pos l='12' c='9' s='8'/>
+</Attr>
+</Id>
+</Enumerated_Values>
+</Set>
+<Set>
+<Id value='ACTIONS' typref='8'>
+<Attr>
+<Pos l='14' c='5' s='7'/>
+</Attr>
+</Id>
+<Enumerated_Values>
+<Id value='NONE' typref='9'>
+<Attr>
+<Pos l='15' c='9' s='4'/>
+</Attr>
+</Id>
+<Id value='TRANSLATE_OPEN_DOOR_A' typref='9'>
+<Attr>
+<Pos l='16' c='9' s='21'/>
+</Attr>
+</Id>
+<Id value='TRANSLATE_OPEN_DOOR_B' typref='9'>
+<Attr>
+<Pos l='17' c='9' s='21'/>
+</Attr>
+</Id>
+<Id value='TRANSLATE_CLOSE_DOOR_A' typref='9'>
+<Attr>
+<Pos l='18' c='9' s='22'/>
+</Attr>
+</Id>
+<Id value='TRANSLATE_CLOSE_DOOR_B' typref='9'>
+<Attr>
+<Pos l='19' c='9' s='22'/>
+</Attr>
+</Id>
+<Id value='ADAPT_PRESSURE_L_TO_A' typref='9'>
+<Attr>
+<Pos l='20' c='9' s='21'/>
+</Attr>
+</Id>
+<Id value='ADAPT_PRESSURE_L_TO_B' typref='9'>
+<Attr>
+<Pos l='21' c='9' s='21'/>
+</Attr>
+</Id>
+</Enumerated_Values>
+</Set>
+<Set>
+<Id value='AUTHENTICATED' typref='10'>
+<Attr>
+<Pos l='23' c='5' s='13'/>
+</Attr>
+</Id>
+<Enumerated_Values>
+<Id value='AUTHENTICATED_A' typref='11'>
+<Attr>
+<Pos l='24' c='9' s='15'/>
+</Attr>
+</Id>
+<Id value='AUTHENTICATED_L' typref='11'>
+<Attr>
+<Pos l='25' c='9' s='15'/>
+</Attr>
+</Id>
+<Id value='AUTHENTICATED_B' typref='11'>
+<Attr>
+<Pos l='26' c='9' s='15'/>
+</Attr>
+</Id>
+<Id value='AUTHENTICATED_NONE' typref='11'>
+<Attr>
+<Pos l='27' c='9' s='18'/>
 </Attr>
 </Id>
 </Enumerated_Values>
@@ -58,6 +155,30 @@
 </Type>
 <Type id='5'>
 <Id value='PRESSURES'/>
+</Type>
+<Type id='6'>
+<Unary_Exp op='POW'>
+<Id value='OBJECTIVES'/>
+</Unary_Exp>
+</Type>
+<Type id='7'>
+<Id value='OBJECTIVES'/>
+</Type>
+<Type id='8'>
+<Unary_Exp op='POW'>
+<Id value='ACTIONS'/>
+</Unary_Exp>
+</Type>
+<Type id='9'>
+<Id value='ACTIONS'/>
+</Type>
+<Type id='10'>
+<Unary_Exp op='POW'>
+<Id value='AUTHENTICATED'/>
+</Unary_Exp>
+</Type>
+<Type id='11'>
+<Id value='AUTHENTICATED'/>
 </Type>
 </TypeInfos>
 

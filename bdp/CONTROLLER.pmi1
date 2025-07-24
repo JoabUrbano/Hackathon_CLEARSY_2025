@@ -1,0 +1,16 @@
+THEORY BalanceX IS
+CONTROLLER,0,0,0,0,0,0,0
+END
+&
+THEORY ProofState
+END
+&
+THEORY MethodList
+END
+&
+THEORY PassList
+END
+&
+THEORY Status IS
+CONTROLLER,0,0,0,0,0,0
+END

@@ -25,7 +25,7 @@
     <Define name="ass" hash="0"/>
     <Define name="sets" hash="0"/>
     <Define name="imlprp" hash="0"/>
-    <Define name="imprp" hash="4334526812545670754">
+    <Define name="imprp" hash="15507380430276620211">
         <Set>
             <Id value="PRESSURES" typref="0"/>
             <Enumerated_Values>
@@ -34,8 +34,37 @@
                 <Id value="PRESSURE_OTHER" typref="1"/>
             </Enumerated_Values>
         </Set>
+        <Set>
+            <Id value="OBJECTIVES" typref="0"/>
+            <Enumerated_Values>
+                <Id value="OBJ_OPEN_DOOR_A" typref="1"/>
+                <Id value="OBJ_OPEN_DOOR_B" typref="1"/>
+                <Id value="OBJ_NONE" typref="1"/>
+            </Enumerated_Values>
+        </Set>
+        <Set>
+            <Id value="ACTIONS" typref="0"/>
+            <Enumerated_Values>
+                <Id value="NONE" typref="1"/>
+                <Id value="TRANSLATE_OPEN_DOOR_A" typref="1"/>
+                <Id value="TRANSLATE_OPEN_DOOR_B" typref="1"/>
+                <Id value="TRANSLATE_CLOSE_DOOR_A" typref="1"/>
+                <Id value="TRANSLATE_CLOSE_DOOR_B" typref="1"/>
+                <Id value="ADAPT_PRESSURE_L_TO_A" typref="1"/>
+                <Id value="ADAPT_PRESSURE_L_TO_B" typref="1"/>
+            </Enumerated_Values>
+        </Set>
+        <Set>
+            <Id value="AUTHENTICATED" typref="0"/>
+            <Enumerated_Values>
+                <Id value="AUTHENTICATED_A" typref="1"/>
+                <Id value="AUTHENTICATED_L" typref="1"/>
+                <Id value="AUTHENTICATED_B" typref="1"/>
+                <Id value="AUTHENTICATED_NONE" typref="1"/>
+            </Enumerated_Values>
+        </Set>
     </Define>
-    <Define name="imext" hash="14972707108317960295">
+    <Define name="imext" hash="4569035000753206893">
         <Exp_Comparison op=":">
             <Id value="pressure_sensor_l" suffix="1" typref="1" tag="C:/Users/Joab/Desktop/rackathom/bdp\/SENSORS.bxml:1:2:1,C:/Users/Joab/Desktop/rackathom/bdp\/SENSORS.bxml:1:3:1:1:1,"/>
             <Id value="PRESSURES" typref="0" tag="C:/Users/Joab/Desktop/rackathom/bdp\/SENSORS.bxml:1:3:1:1:2"/>
@@ -47,6 +76,34 @@
         <Exp_Comparison op=":">
             <Id value="contact_sensor_b" suffix="1" typref="2" tag="C:/Users/Joab/Desktop/rackathom/bdp\/SENSORS.bxml:1:2:3,C:/Users/Joab/Desktop/rackathom/bdp\/SENSORS.bxml:1:3:1:3:1,"/>
             <Id value="BOOL" typref="3" tag="C:/Users/Joab/Desktop/rackathom/bdp\/SENSORS.bxml:1:3:1:3:2"/>
+        </Exp_Comparison>
+        <Exp_Comparison op=":">
+            <Id value="card_reader_a" suffix="1" typref="2" tag="C:/Users/Joab/Desktop/rackathom/bdp\/SENSORS.bxml:1:2:4,C:/Users/Joab/Desktop/rackathom/bdp\/SENSORS.bxml:1:3:1:4:1,"/>
+            <Id value="BOOL" typref="3" tag="C:/Users/Joab/Desktop/rackathom/bdp\/SENSORS.bxml:1:3:1:4:2"/>
+        </Exp_Comparison>
+        <Exp_Comparison op=":">
+            <Id value="card_reader_l" suffix="1" typref="2" tag="C:/Users/Joab/Desktop/rackathom/bdp\/SENSORS.bxml:1:2:5,C:/Users/Joab/Desktop/rackathom/bdp\/SENSORS.bxml:1:3:1:5:1,"/>
+            <Id value="BOOL" typref="3" tag="C:/Users/Joab/Desktop/rackathom/bdp\/SENSORS.bxml:1:3:1:5:2"/>
+        </Exp_Comparison>
+        <Exp_Comparison op=":">
+            <Id value="card_reader_b" suffix="1" typref="2" tag="C:/Users/Joab/Desktop/rackathom/bdp\/SENSORS.bxml:1:2:6,C:/Users/Joab/Desktop/rackathom/bdp\/SENSORS.bxml:1:3:1:6:1,"/>
+            <Id value="BOOL" typref="3" tag="C:/Users/Joab/Desktop/rackathom/bdp\/SENSORS.bxml:1:3:1:6:2"/>
+        </Exp_Comparison>
+        <Exp_Comparison op=":">
+            <Id value="button_room_a_open_a" suffix="1" typref="2" tag="C:/Users/Joab/Desktop/rackathom/bdp\/SENSORS.bxml:1:2:7,C:/Users/Joab/Desktop/rackathom/bdp\/SENSORS.bxml:1:3:1:7:1,"/>
+            <Id value="BOOL" typref="3" tag="C:/Users/Joab/Desktop/rackathom/bdp\/SENSORS.bxml:1:3:1:7:2"/>
+        </Exp_Comparison>
+        <Exp_Comparison op=":">
+            <Id value="button_room_l_open_a" suffix="1" typref="2" tag="C:/Users/Joab/Desktop/rackathom/bdp\/SENSORS.bxml:1:2:8,C:/Users/Joab/Desktop/rackathom/bdp\/SENSORS.bxml:1:3:1:8:1,"/>
+            <Id value="BOOL" typref="3" tag="C:/Users/Joab/Desktop/rackathom/bdp\/SENSORS.bxml:1:3:1:8:2"/>
+        </Exp_Comparison>
+        <Exp_Comparison op=":">
+            <Id value="button_room_l_open_b" suffix="1" typref="2" tag="C:/Users/Joab/Desktop/rackathom/bdp\/SENSORS.bxml:1:2:9,C:/Users/Joab/Desktop/rackathom/bdp\/SENSORS.bxml:1:3:1:9:1,"/>
+            <Id value="BOOL" typref="3" tag="C:/Users/Joab/Desktop/rackathom/bdp\/SENSORS.bxml:1:3:1:9:2"/>
+        </Exp_Comparison>
+        <Exp_Comparison op=":">
+            <Id value="button_room_b_open_b" suffix="1" typref="2" tag="C:/Users/Joab/Desktop/rackathom/bdp\/SENSORS.bxml:1:2:10,C:/Users/Joab/Desktop/rackathom/bdp\/SENSORS.bxml:1:3:1:10:1,"/>
+            <Id value="BOOL" typref="3" tag="C:/Users/Joab/Desktop/rackathom/bdp\/SENSORS.bxml:1:3:1:10:2"/>
         </Exp_Comparison>
         <Exp_Comparison op=":">
             <Id value="enable_door_a" suffix="1" typref="2" tag="C:/Users/Joab/Desktop/rackathom/bdp\/ENABLER.bxml:1:2:1,C:/Users/Joab/Desktop/rackathom/bdp\/ENABLER.bxml:1:3:1:1:1,"/>
@@ -77,120 +134,6 @@
             </Exp_Comparison>
         </Binary_Pred>
     </Define>
-    <Proof_Obligation goalHash="4978411048582399149">
-        <Tag>Operation_test_compute_enabling</Tag>
-        <Definition name="B definitions"/>
-        <Definition name="ctx"/>
-        <Definition name="mchcst"/>
-        <Definition name="aprp"/>
-        <Definition name="imlprp"/>
-        <Definition name="imprp"/>
-        <Definition name="imext"/>
-        <Definition name="seext"/>
-        <Definition name="abs"/>
-        <Definition name="inv"/>
-        <Definition name="ass"/>
-        <Local_Hyp num="1">
-            <Exp_Comparison op=":">
-                <Id value="pressure" typref="1" tag="C:/Users/Joab/Desktop/rackathom/bdp\/SENSORS.bxml:1:5:1:1:1:2:1:1:1,C:\Users\Joab\Desktop\rackathom\bdp\test_ENABLER_i.bxml:1:4:1:1:1:1:1:1"/>
-                <Id value="PRESSURES" typref="0" tag="C:/Users/Joab/Desktop/rackathom/bdp\/SENSORS.bxml:1:5:1:1:1:2:1:1:2,C:\Users\Joab\Desktop\rackathom\bdp\test_ENABLER_i.bxml:1:4:1:1:1:1:1:1"/>
-            </Exp_Comparison>
-        </Local_Hyp>
-        <Local_Hyp num="2">
-            <Exp_Comparison op=":">
-                <Id value="contactA" typref="2" tag="C:/Users/Joab/Desktop/rackathom/bdp\/SENSORS.bxml:1:5:1:1:1:2:1:2:1,C:\Users\Joab\Desktop\rackathom\bdp\test_ENABLER_i.bxml:1:4:1:1:1:1:1:1"/>
-                <Id value="BOOL" typref="3" tag="C:/Users/Joab/Desktop/rackathom/bdp\/SENSORS.bxml:1:5:1:1:1:2:1:2:2,C:\Users\Joab\Desktop\rackathom\bdp\test_ENABLER_i.bxml:1:4:1:1:1:1:1:1"/>
-            </Exp_Comparison>
-        </Local_Hyp>
-        <Local_Hyp num="3">
-            <Exp_Comparison op=":">
-                <Id value="contactB" typref="2" tag="C:/Users/Joab/Desktop/rackathom/bdp\/SENSORS.bxml:1:5:1:1:1:2:1:3:1,C:\Users\Joab\Desktop\rackathom\bdp\test_ENABLER_i.bxml:1:4:1:1:1:1:1:1"/>
-                <Id value="BOOL" typref="3" tag="C:/Users/Joab/Desktop/rackathom/bdp\/SENSORS.bxml:1:5:1:1:1:2:1:3:2,C:\Users\Joab\Desktop\rackathom\bdp\test_ENABLER_i.bxml:1:4:1:1:1:1:1:1"/>
-            </Exp_Comparison>
-        </Local_Hyp>
-        <Local_Hyp num="4">
-            <Binary_Pred op="=&gt;">
-                <Exp_Comparison op="=">
-                    <Id value="contactA" typref="2" tag="C:/Users/Joab/Desktop/rackathom/bdp\/SENSORS.bxml:1:5:1:1:1:2:1:4:1:1,C:\Users\Joab\Desktop\rackathom\bdp\test_ENABLER_i.bxml:1:4:1:1:1:1:1:1"/>
-                    <Boolean_Literal value="FALSE" typref="2" tag="C:/Users/Joab/Desktop/rackathom/bdp\/SENSORS.bxml:1:5:1:1:1:2:1:4:1:2,C:\Users\Joab\Desktop\rackathom\bdp\test_ENABLER_i.bxml:1:4:1:1:1:1:1:1"/>
-                </Exp_Comparison>
-                <Nary_Pred op="&amp;">
-                    <Exp_Comparison op="=">
-                        <Id value="contactB" typref="2" tag="C:/Users/Joab/Desktop/rackathom/bdp\/SENSORS.bxml:1:5:1:1:1:2:1:4:2:1:1,C:\Users\Joab\Desktop\rackathom\bdp\test_ENABLER_i.bxml:1:4:1:1:1:1:1:1"/>
-                        <Boolean_Literal value="TRUE" typref="2" tag="C:/Users/Joab/Desktop/rackathom/bdp\/SENSORS.bxml:1:5:1:1:1:2:1:4:2:1:2,C:\Users\Joab\Desktop\rackathom\bdp\test_ENABLER_i.bxml:1:4:1:1:1:1:1:1"/>
-                    </Exp_Comparison>
-                    <Exp_Comparison op="=">
-                        <Id value="pressure" typref="1" tag="C:/Users/Joab/Desktop/rackathom/bdp\/SENSORS.bxml:1:5:1:1:1:2:1:4:2:2:1,C:\Users\Joab\Desktop\rackathom\bdp\test_ENABLER_i.bxml:1:4:1:1:1:1:1:1"/>
-                        <Id value="PRESSURE_A" typref="1" tag="C:/Users/Joab/Desktop/rackathom/bdp\/SENSORS.bxml:1:5:1:1:1:2:1:4:2:2:2,C:\Users\Joab\Desktop\rackathom\bdp\test_ENABLER_i.bxml:1:4:1:1:1:1:1:1"/>
-                    </Exp_Comparison>
-                </Nary_Pred>
-            </Binary_Pred>
-        </Local_Hyp>
-        <Local_Hyp num="5">
-            <Binary_Pred op="=&gt;">
-                <Exp_Comparison op="=">
-                    <Id value="contactB" typref="2" tag="C:/Users/Joab/Desktop/rackathom/bdp\/SENSORS.bxml:1:5:1:1:1:2:1:5:1:1,C:\Users\Joab\Desktop\rackathom\bdp\test_ENABLER_i.bxml:1:4:1:1:1:1:1:1"/>
-                    <Boolean_Literal value="FALSE" typref="2" tag="C:/Users/Joab/Desktop/rackathom/bdp\/SENSORS.bxml:1:5:1:1:1:2:1:5:1:2,C:\Users\Joab\Desktop\rackathom\bdp\test_ENABLER_i.bxml:1:4:1:1:1:1:1:1"/>
-                </Exp_Comparison>
-                <Nary_Pred op="&amp;">
-                    <Exp_Comparison op="=">
-                        <Id value="contactA" typref="2" tag="C:/Users/Joab/Desktop/rackathom/bdp\/SENSORS.bxml:1:5:1:1:1:2:1:5:2:1:1,C:\Users\Joab\Desktop\rackathom\bdp\test_ENABLER_i.bxml:1:4:1:1:1:1:1:1"/>
-                        <Boolean_Literal value="TRUE" typref="2" tag="C:/Users/Joab/Desktop/rackathom/bdp\/SENSORS.bxml:1:5:1:1:1:2:1:5:2:1:2,C:\Users\Joab\Desktop\rackathom\bdp\test_ENABLER_i.bxml:1:4:1:1:1:1:1:1"/>
-                    </Exp_Comparison>
-                    <Exp_Comparison op="=">
-                        <Id value="pressure" typref="1" tag="C:/Users/Joab/Desktop/rackathom/bdp\/SENSORS.bxml:1:5:1:1:1:2:1:5:2:2:1,C:\Users\Joab\Desktop\rackathom\bdp\test_ENABLER_i.bxml:1:4:1:1:1:1:1:1"/>
-                        <Id value="PRESSURE_B" typref="1" tag="C:/Users/Joab/Desktop/rackathom/bdp\/SENSORS.bxml:1:5:1:1:1:2:1:5:2:2:2,C:\Users\Joab\Desktop\rackathom\bdp\test_ENABLER_i.bxml:1:4:1:1:1:1:1:1"/>
-                    </Exp_Comparison>
-                </Nary_Pred>
-            </Binary_Pred>
-        </Local_Hyp>
-        <Local_Hyp num="6">
-            <Unary_Pred op="not">
-                <Exp_Comparison op="=">
-                    <Id value="pressure" typref="1" tag="C:/Users/Joab/Desktop/rackathom/bdp\/SENSORS.bxml:1:2:1,C:/Users/Joab/Desktop/rackathom/bdp\/ENABLER.bxml:1:5:1:1:1:1:1:1,,C:\Users\Joab\Desktop\rackathom\bdp\test_ENABLER_i.bxml:1:4:1:1:1:2:1:1,C:/Users/Joab/Desktop/rackathom/bdp\/SENSORS.bxml:1:5:1:1:1:3:1:3:2:1,C:\Users\Joab\Desktop\rackathom\bdp\test_ENABLER_i.bxml:1:4:1:1:1:1:1:1"/>
-                    <Id value="PRESSURE_A" typref="1" tag="C:/Users/Joab/Desktop/rackathom/bdp\/ENABLER.bxml:1:5:1:1:1:1:1:2,C:\Users\Joab\Desktop\rackathom\bdp\test_ENABLER_i.bxml:1:4:1:1:1:2:1:1"/>
-                </Exp_Comparison>
-            </Unary_Pred>
-        </Local_Hyp>
-        <Local_Hyp num="7">
-            <Unary_Pred op="not">
-                <Exp_Comparison op="=">
-                    <Id value="pressure" typref="1" tag="C:/Users/Joab/Desktop/rackathom/bdp\/SENSORS.bxml:1:2:1,C:/Users/Joab/Desktop/rackathom/bdp\/ENABLER.bxml:1:5:1:1:1:2:1:1,,C:\Users\Joab\Desktop\rackathom\bdp\test_ENABLER_i.bxml:1:4:1:1:1:2:1:1,C:/Users/Joab/Desktop/rackathom/bdp\/SENSORS.bxml:1:5:1:1:1:3:1:3:2:1,C:\Users\Joab\Desktop\rackathom\bdp\test_ENABLER_i.bxml:1:4:1:1:1:1:1:1"/>
-                    <Id value="PRESSURE_B" typref="1" tag="C:/Users/Joab/Desktop/rackathom/bdp\/ENABLER.bxml:1:5:1:1:1:2:1:2,C:\Users\Joab\Desktop\rackathom\bdp\test_ENABLER_i.bxml:1:4:1:1:1:2:1:1"/>
-                </Exp_Comparison>
-            </Unary_Pred>
-        </Local_Hyp>
-        <Simple_Goal>
-            <Tag>Precondition predicate</Tag>
-            <Ref_Hyp num="1"/>
-            <Ref_Hyp num="2"/>
-            <Ref_Hyp num="3"/>
-            <Ref_Hyp num="4"/>
-            <Ref_Hyp num="5"/>
-            <Ref_Hyp num="6"/>
-            <Goal>
-                <Exp_Comparison op="=">
-                    <Id value="contactA" typref="2" tag="C:/Users/Joab/Desktop/rackathom/bdp\/SENSORS.bxml:1:2:2,C:/Users/Joab/Desktop/rackathom/bdp\/ENABLER.bxml:1:5:1:1:1:1:2:1,,C:\Users\Joab\Desktop\rackathom\bdp\test_ENABLER_i.bxml:1:4:1:1:1:2:1:1,C:/Users/Joab/Desktop/rackathom/bdp\/SENSORS.bxml:1:5:1:1:1:3:1:1:2:1,C:\Users\Joab\Desktop\rackathom\bdp\test_ENABLER_i.bxml:1:4:1:1:1:1:1:1"/>
-                    <Boolean_Literal value="TRUE" typref="2" tag="C:/Users/Joab/Desktop/rackathom/bdp\/ENABLER.bxml:1:5:1:1:1:1:2:2,C:\Users\Joab\Desktop\rackathom\bdp\test_ENABLER_i.bxml:1:4:1:1:1:2:1:1"/>
-                </Exp_Comparison>
-            </Goal>
-        </Simple_Goal>
-        <Simple_Goal>
-            <Tag>Precondition predicate</Tag>
-            <Ref_Hyp num="1"/>
-            <Ref_Hyp num="2"/>
-            <Ref_Hyp num="3"/>
-            <Ref_Hyp num="4"/>
-            <Ref_Hyp num="5"/>
-            <Ref_Hyp num="7"/>
-            <Goal>
-                <Exp_Comparison op="=">
-                    <Id value="contactB" typref="2" tag="C:/Users/Joab/Desktop/rackathom/bdp\/SENSORS.bxml:1:2:3,C:/Users/Joab/Desktop/rackathom/bdp\/ENABLER.bxml:1:5:1:1:1:2:2:1,,C:\Users\Joab\Desktop\rackathom\bdp\test_ENABLER_i.bxml:1:4:1:1:1:2:1:1,C:/Users/Joab/Desktop/rackathom/bdp\/SENSORS.bxml:1:5:1:1:1:3:1:2:2:1,C:\Users\Joab\Desktop\rackathom\bdp\test_ENABLER_i.bxml:1:4:1:1:1:1:1:1"/>
-                    <Boolean_Literal value="TRUE" typref="2" tag="C:/Users/Joab/Desktop/rackathom/bdp\/ENABLER.bxml:1:5:1:1:1:2:2:2,C:\Users\Joab\Desktop\rackathom\bdp\test_ENABLER_i.bxml:1:4:1:1:1:2:1:1"/>
-                </Exp_Comparison>
-            </Goal>
-        </Simple_Goal>
-    </Proof_Obligation>
     <TypeInfos>
         <Type id="0">
             <Unary_Exp op="POW">

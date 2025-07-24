@@ -1,6 +1,6 @@
 THEORY BalanceX IS
 test_ENABLER_i,2,0,0,2,0,0,0;
-Operation_test_compute_anabling,2,0,0,2,0,0,0
+Operation_test_compute_enabling,2,0,0,2,0,0,0
 END
 &
 THEORY ProofState IS
@@ -20,5 +20,5 @@ END
 &
 THEORY Status IS
 test_ENABLER_i,2,0,2,0,0,0;
-Operation_test_compute_anabling,2,0,2,0,0,0
+Operation_test_compute_enabling,2,0,2,0,0,0
 END

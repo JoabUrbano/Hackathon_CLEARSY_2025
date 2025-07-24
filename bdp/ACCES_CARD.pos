@@ -1,58 +1,58 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<Proof_Obligations xmlns="https://www.atelierb.eu/Formats/pog" version="1.0" author="pmi2Pos">
+<Proof_Obligations version="1.0" xmlns="https://www.atelierb.eu/Formats/pog" author="pmi2Pos">
 <Proof_Obligation>
 <Tag>WellDefinedness_is_valid</Tag>
 <Simple_Goal status="Unproved">
 <Tag>Operation is well defined</Tag>
-<Proof_State passList="Force(0),(?; 0; 1; 2; 3)" methodList="?" proofState="Unproved"/>
+<Proof_State passList="Force(0),(?; 0; 1; 2; 3)" proofState="Unproved" methodList="?"/>
 </Simple_Goal>
 <Simple_Goal status="Proved">
 <Tag>Operation is well defined</Tag>
-<Proof_State passList="Force(0),?" methodList="pr" proofState="Proved(0)"/>
+<Proof_State passList="Force(0),?" proofState="Proved(0)" methodList="pr"/>
 </Simple_Goal>
 <Simple_Goal status="Proved">
 <Tag>Operation is well defined</Tag>
-<Proof_State passList="Force(0),?" methodList="pr" proofState="Proved(0)"/>
+<Proof_State passList="Force(0),?" proofState="Proved(0)" methodList="pr"/>
 </Simple_Goal>
 <Simple_Goal status="Proved">
 <Tag>Operation is well defined</Tag>
-<Proof_State passList="Force(0),?" methodList="pr" proofState="Proved(0)"/>
+<Proof_State passList="Force(0),?" proofState="Proved(0)" methodList="pr"/>
 </Simple_Goal>
 <Simple_Goal status="Unproved">
 <Tag>Operation is well defined</Tag>
-<Proof_State passList="Force(0),(?; 0; 1; 2; 3)" methodList="?" proofState="Unproved"/>
+<Proof_State passList="Force(0),(?; 0; 1; 2; 3)" proofState="Unproved" methodList="?"/>
 </Simple_Goal>
 <Simple_Goal status="Proved">
 <Tag>Operation is well defined</Tag>
-<Proof_State passList="Force(0),?" methodList="pr" proofState="Proved(0)"/>
+<Proof_State passList="Force(0),?" proofState="Proved(0)" methodList="pr"/>
 </Simple_Goal>
 <Simple_Goal status="Proved">
 <Tag>Operation is well defined</Tag>
-<Proof_State passList="Force(0),?" methodList="pr" proofState="Proved(0)"/>
+<Proof_State passList="Force(0),?" proofState="Proved(0)" methodList="pr"/>
 </Simple_Goal>
 <Simple_Goal status="Unproved">
 <Tag>Operation is well defined</Tag>
-<Proof_State passList="Force(0),(?; 0; 1; 2; 3)" methodList="?" proofState="Unproved"/>
+<Proof_State passList="Force(0),(?; 0; 1; 2; 3)" proofState="Unproved" methodList="?"/>
 </Simple_Goal>
 <Simple_Goal status="Proved">
 <Tag>Operation is well defined</Tag>
-<Proof_State passList="Force(0),?" methodList="pr" proofState="Proved(0)"/>
+<Proof_State passList="Force(0),?" proofState="Proved(0)" methodList="pr"/>
 </Simple_Goal>
 <Simple_Goal status="Proved">
 <Tag>Operation is well defined</Tag>
-<Proof_State passList="Force(0),?" methodList="pr" proofState="Proved(0)"/>
+<Proof_State passList="Force(0),?" proofState="Proved(0)" methodList="pr"/>
 </Simple_Goal>
 <Simple_Goal status="Proved">
 <Tag>Operation is well defined</Tag>
-<Proof_State passList="Force(0),?" methodList="pr" proofState="Proved(0)"/>
+<Proof_State passList="Force(0),?" proofState="Proved(0)" methodList="pr"/>
 </Simple_Goal>
 <Simple_Goal status="Unproved">
 <Tag>Operation is well defined</Tag>
-<Proof_State passList="Force(0),(?; 0; 1; 2; 3)" methodList="?" proofState="Unproved"/>
+<Proof_State passList="Force(0),(?; 0; 1; 2; 3)" proofState="Unproved" methodList="?"/>
 </Simple_Goal>
 <Simple_Goal status="Proved">
 <Tag>Operation is well defined</Tag>
-<Proof_State passList="Force(0),?" methodList="pr" proofState="Proved(0)"/>
+<Proof_State passList="Force(0),?" proofState="Proved(0)" methodList="pr"/>
 </Simple_Goal>
 </Proof_Obligation>
 </Proof_Obligations>

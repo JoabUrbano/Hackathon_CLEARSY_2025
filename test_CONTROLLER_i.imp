@@ -1,0 +1,13 @@
+IMPLEMENTATION test_CONTROLLER_i
+REFINES test_CONTROLLER
+    
+IMPORTS CTX, SENSORS, ENABLER, CONTROLLER
+OPERATIONS
+    test_control =
+    BEGIN
+        update_sensors_states;
+        process_readers;
+        control;
+        compute_enabling
+    END  
+END

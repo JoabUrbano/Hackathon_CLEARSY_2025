@@ -47,8 +47,8 @@ THEORY ListVisibleVariablesX IS
   Abstract_List_VisibleVariables(Machine(SENSORS))==(?);
   External_List_VisibleVariables(Machine(SENSORS))==(?);
   Expanded_List_VisibleVariables(Machine(SENSORS))==(?);
-  List_VisibleVariables(Machine(SENSORS))==(contact_sensor_b,contact_sensor_a,pressure_sensor_l);
-  Internal_List_VisibleVariables(Machine(SENSORS))==(contact_sensor_b,contact_sensor_a,pressure_sensor_l)
+  List_VisibleVariables(Machine(SENSORS))==(button_room_b_open_b,button_room_l_open_b,button_room_l_open_a,button_room_a_open_a,card_reader_b,card_reader_l,card_reader_a,contact_sensor_b,contact_sensor_a,pressure_sensor_l);
+  Internal_List_VisibleVariables(Machine(SENSORS))==(button_room_b_open_b,button_room_l_open_b,button_room_l_open_a,button_room_a_open_a,card_reader_b,card_reader_l,card_reader_a,contact_sensor_b,contact_sensor_a,pressure_sensor_l)
 END
 &
 THEORY ListInvariantX IS
@@ -57,7 +57,7 @@ THEORY ListInvariantX IS
   Expanded_List_Invariant(Machine(SENSORS))==(btrue);
   Abstract_List_Invariant(Machine(SENSORS))==(btrue);
   Context_List_Invariant(Machine(SENSORS))==(btrue);
-  List_Invariant(Machine(SENSORS))==(pressure_sensor_l: PRESSURES & contact_sensor_a: BOOL & contact_sensor_b: BOOL)
+  List_Invariant(Machine(SENSORS))==(pressure_sensor_l: PRESSURES & contact_sensor_a: BOOL & contact_sensor_b: BOOL & card_reader_a: BOOL & card_reader_l: BOOL & card_reader_b: BOOL & button_room_a_open_a: BOOL & button_room_l_open_a: BOOL & button_room_l_open_b: BOOL & button_room_b_open_b: BOOL)
 END
 &
 THEORY ListAssertionsX IS
@@ -76,9 +76,9 @@ THEORY ListExclusivityX IS
 END
 &
 THEORY ListInitialisationX IS
-  Expanded_List_Initialisation(Machine(SENSORS))==(@(contact_sensor_a$0).(contact_sensor_a$0: BOOL ==> contact_sensor_a:=contact_sensor_a$0) || @(contact_sensor_b$0).(contact_sensor_b$0: BOOL ==> contact_sensor_b:=contact_sensor_b$0) || @(pressure_sensor_l$0).(pressure_sensor_l$0: PRESSURES ==> pressure_sensor_l:=pressure_sensor_l$0));
+  Expanded_List_Initialisation(Machine(SENSORS))==(@(pressure_sensor_l$0).(pressure_sensor_l$0: PRESSURES ==> pressure_sensor_l:=pressure_sensor_l$0) || @(contact_sensor_a$0).(contact_sensor_a$0: BOOL ==> contact_sensor_a:=contact_sensor_a$0) || @(contact_sensor_b$0).(contact_sensor_b$0: BOOL ==> contact_sensor_b:=contact_sensor_b$0) || card_reader_a:=FALSE || @(card_reader_l$0).(card_reader_l$0: BOOL ==> card_reader_l:=card_reader_l$0) || @(card_reader_b$0).(card_reader_b$0: BOOL ==> card_reader_b:=card_reader_b$0) || @(button_room_a_open_a$0).(button_room_a_open_a$0: BOOL ==> button_room_a_open_a:=button_room_a_open_a$0) || @(button_room_l_open_a$0).(button_room_l_open_a$0: BOOL ==> button_room_l_open_a:=button_room_l_open_a$0) || @(button_room_l_open_b$0).(button_room_l_open_b$0: BOOL ==> button_room_l_open_b:=button_room_l_open_b$0) || @(button_room_b_open_b$0).(button_room_b_open_b$0: BOOL ==> button_room_b_open_b:=button_room_b_open_b$0));
   Context_List_Initialisation(Machine(SENSORS))==(skip);
-  List_Initialisation(Machine(SENSORS))==(contact_sensor_a:: BOOL || contact_sensor_b:: BOOL || pressure_sensor_l:: PRESSURES)
+  List_Initialisation(Machine(SENSORS))==(pressure_sensor_l:: PRESSURES || contact_sensor_a:: BOOL || contact_sensor_b:: BOOL || card_reader_a:=FALSE || card_reader_l:: BOOL || card_reader_b:: BOOL || button_room_a_open_a:: BOOL || button_room_l_open_a:: BOOL || button_room_l_open_b:: BOOL || button_room_b_open_b:: BOOL)
 END
 &
 THEORY ListParametersX IS
@@ -118,8 +118,8 @@ THEORY ListPreconditionX IS
 END
 &
 THEORY ListSubstitutionX IS
-  Expanded_List_Substitution(Machine(SENSORS),update_sensors_states)==(btrue | @(pressure,contactA,contactB).(pressure: PRESSURES & contactA: BOOL & contactB: BOOL & (contactA = FALSE => contactB = TRUE & pressure = PRESSURE_A) & (contactB = FALSE => contactA = TRUE & pressure = PRESSURE_B) ==> contact_sensor_a,contact_sensor_b,pressure_sensor_l:=contactA,contactB,pressure));
-  List_Substitution(Machine(SENSORS),update_sensors_states)==(ANY pressure,contactA,contactB WHERE pressure: PRESSURES & contactA: BOOL & contactB: BOOL & (contactA = FALSE => contactB = TRUE & pressure = PRESSURE_A) & (contactB = FALSE => contactA = TRUE & pressure = PRESSURE_B) THEN contact_sensor_a:=contactA || contact_sensor_b:=contactB || pressure_sensor_l:=pressure END)
+  Expanded_List_Substitution(Machine(SENSORS),update_sensors_states)==(btrue | @(pressure_sensor_l$1,contact_sensor_a$1,contact_sensor_b$1).(pressure_sensor_l$1: PRESSURES & contact_sensor_a$1: BOOL & contact_sensor_b$1: BOOL & (not(pressure_sensor_l$1 = PRESSURE_A) => contact_sensor_a$1 = TRUE) & (not(pressure_sensor_l$1 = PRESSURE_B) => contact_sensor_b$1 = TRUE) ==> pressure_sensor_l,contact_sensor_a,contact_sensor_b:=pressure_sensor_l$1,contact_sensor_a$1,contact_sensor_b$1) || @(card_reader_a$0).(card_reader_a$0: BOOL ==> card_reader_a:=card_reader_a$0) || @(card_reader_l$0).(card_reader_l$0: BOOL ==> card_reader_l:=card_reader_l$0) || @(card_reader_b$0).(card_reader_b$0: BOOL ==> card_reader_b:=card_reader_b$0) || @(button_room_a_open_a$0).(button_room_a_open_a$0: BOOL ==> button_room_a_open_a:=button_room_a_open_a$0) || @(button_room_l_open_a$0).(button_room_l_open_a$0: BOOL ==> button_room_l_open_a:=button_room_l_open_a$0) || @(button_room_l_open_b$0).(button_room_l_open_b$0: BOOL ==> button_room_l_open_b:=button_room_l_open_b$0) || @(button_room_b_open_b$0).(button_room_b_open_b$0: BOOL ==> button_room_b_open_b:=button_room_b_open_b$0));
+  List_Substitution(Machine(SENSORS),update_sensors_states)==(pressure_sensor_l,contact_sensor_a,contact_sensor_b: (pressure_sensor_l: PRESSURES & contact_sensor_a: BOOL & contact_sensor_b: BOOL & (not(pressure_sensor_l = PRESSURE_A) => contact_sensor_a = TRUE) & (not(pressure_sensor_l = PRESSURE_B) => contact_sensor_b = TRUE)) || card_reader_a:: BOOL || card_reader_l:: BOOL || card_reader_b:: BOOL || button_room_a_open_a:: BOOL || button_room_l_open_a:: BOOL || button_room_l_open_b:: BOOL || button_room_b_open_b:: BOOL)
 END
 &
 THEORY ListConstantsX IS
@@ -129,17 +129,20 @@ THEORY ListConstantsX IS
 END
 &
 THEORY ListSetsX IS
-  Set_Definition(Machine(SENSORS),PRESSURES)==({PRESSURE_A,PRESSURE_B,PRESSURE_OTHER});
-  Context_List_Enumerated(Machine(SENSORS))==(PRESSURES);
+  Set_Definition(Machine(SENSORS),AUTHENTICATED)==({AUTHENTICATED_A,AUTHENTICATED_L,AUTHENTICATED_B,AUTHENTICATED_NONE});
+  Context_List_Enumerated(Machine(SENSORS))==(PRESSURES,OBJECTIVES,ACTIONS,AUTHENTICATED);
   Context_List_Defered(Machine(SENSORS))==(?);
-  Context_List_Sets(Machine(SENSORS))==(PRESSURES);
+  Context_List_Sets(Machine(SENSORS))==(PRESSURES,OBJECTIVES,ACTIONS,AUTHENTICATED);
   List_Valuable_Sets(Machine(SENSORS))==(?);
   Inherited_List_Enumerated(Machine(SENSORS))==(?);
   Inherited_List_Defered(Machine(SENSORS))==(?);
   Inherited_List_Sets(Machine(SENSORS))==(?);
   List_Enumerated(Machine(SENSORS))==(?);
   List_Defered(Machine(SENSORS))==(?);
-  List_Sets(Machine(SENSORS))==(?)
+  List_Sets(Machine(SENSORS))==(?);
+  Set_Definition(Machine(SENSORS),ACTIONS)==({NONE,TRANSLATE_OPEN_DOOR_A,TRANSLATE_OPEN_DOOR_B,TRANSLATE_CLOSE_DOOR_A,TRANSLATE_CLOSE_DOOR_B,ADAPT_PRESSURE_L_TO_A,ADAPT_PRESSURE_L_TO_B});
+  Set_Definition(Machine(SENSORS),OBJECTIVES)==({OBJ_OPEN_DOOR_A,OBJ_OPEN_DOOR_B,OBJ_NONE});
+  Set_Definition(Machine(SENSORS),PRESSURES)==({PRESSURE_A,PRESSURE_B,PRESSURE_OTHER})
 END
 &
 THEORY ListHiddenConstantsX IS
@@ -151,7 +154,7 @@ END
 &
 THEORY ListPropertiesX IS
   Abstract_List_Properties(Machine(SENSORS))==(btrue);
-  Context_List_Properties(Machine(SENSORS))==(PRESSURES: FIN(INTEGER) & not(PRESSURES = {}));
+  Context_List_Properties(Machine(SENSORS))==(PRESSURES: FIN(INTEGER) & not(PRESSURES = {}) & OBJECTIVES: FIN(INTEGER) & not(OBJECTIVES = {}) & ACTIONS: FIN(INTEGER) & not(ACTIONS = {}) & AUTHENTICATED: FIN(INTEGER) & not(AUTHENTICATED = {}));
   Inherited_List_Properties(Machine(SENSORS))==(btrue);
   List_Properties(Machine(SENSORS))==(btrue)
 END
@@ -168,16 +171,16 @@ THEORY ListSeenInfoX IS
 END
 &
 THEORY ListANYVarX IS
-  List_ANY_Var(Machine(SENSORS),update_sensors_states)==((Var(pressure) == etype(PRESSURES,?,?)),(Var(contactA) == btype(BOOL,?,?)),(Var(contactB) == btype(BOOL,?,?)))
+  List_ANY_Var(Machine(SENSORS),update_sensors_states)==(?)
 END
 &
 THEORY ListOfIdsX IS
   List_Of_Ids(Machine(SENSORS)) == (? | ? | ? | ? | update_sensors_states | ? | seen(Machine(CTX)) | ? | SENSORS);
   List_Of_HiddenCst_Ids(Machine(SENSORS)) == (? | ?);
   List_Of_VisibleCst_Ids(Machine(SENSORS)) == (?);
-  List_Of_VisibleVar_Ids(Machine(SENSORS)) == (contact_sensor_b,contact_sensor_a,pressure_sensor_l | ?);
+  List_Of_VisibleVar_Ids(Machine(SENSORS)) == (button_room_b_open_b,button_room_l_open_b,button_room_l_open_a,button_room_a_open_a,card_reader_b,card_reader_l,card_reader_a,contact_sensor_b,contact_sensor_a,pressure_sensor_l | ?);
   List_Of_Ids_SeenBNU(Machine(SENSORS)) == (?: ?);
-  List_Of_Ids(Machine(CTX)) == (PRESSURES,PRESSURE_A,PRESSURE_B,PRESSURE_OTHER | ? | ? | ? | ? | ? | ? | ? | CTX);
+  List_Of_Ids(Machine(CTX)) == (PRESSURES,OBJECTIVES,ACTIONS,AUTHENTICATED,PRESSURE_A,PRESSURE_B,PRESSURE_OTHER,OBJ_OPEN_DOOR_A,OBJ_OPEN_DOOR_B,OBJ_NONE,NONE,TRANSLATE_OPEN_DOOR_A,TRANSLATE_OPEN_DOOR_B,TRANSLATE_CLOSE_DOOR_A,TRANSLATE_CLOSE_DOOR_B,ADAPT_PRESSURE_L_TO_A,ADAPT_PRESSURE_L_TO_B,AUTHENTICATED_A,AUTHENTICATED_L,AUTHENTICATED_B,AUTHENTICATED_NONE | ? | ? | ? | ? | ? | ? | ? | CTX);
   List_Of_HiddenCst_Ids(Machine(CTX)) == (? | ?);
   List_Of_VisibleCst_Ids(Machine(CTX)) == (?);
   List_Of_VisibleVar_Ids(Machine(CTX)) == (? | ?);
@@ -185,7 +188,7 @@ THEORY ListOfIdsX IS
 END
 &
 THEORY VisibleVariablesEnvX IS
-  VisibleVariables(Machine(SENSORS)) == (Type(contact_sensor_b) == Mvv(btype(BOOL,?,?));Type(contact_sensor_a) == Mvv(btype(BOOL,?,?));Type(pressure_sensor_l) == Mvv(etype(PRESSURES,?,?)))
+  VisibleVariables(Machine(SENSORS)) == (Type(button_room_b_open_b) == Mvv(btype(BOOL,?,?));Type(button_room_l_open_b) == Mvv(btype(BOOL,?,?));Type(button_room_l_open_a) == Mvv(btype(BOOL,?,?));Type(button_room_a_open_a) == Mvv(btype(BOOL,?,?));Type(card_reader_b) == Mvv(btype(BOOL,?,?));Type(card_reader_l) == Mvv(btype(BOOL,?,?));Type(card_reader_a) == Mvv(btype(BOOL,?,?));Type(contact_sensor_b) == Mvv(btype(BOOL,?,?));Type(contact_sensor_a) == Mvv(btype(BOOL,?,?));Type(pressure_sensor_l) == Mvv(etype(PRESSURES,?,?)))
 END
 &
 THEORY OperationsEnvX IS

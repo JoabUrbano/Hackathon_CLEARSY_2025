@@ -18,7 +18,7 @@
     </Define>
     <Define name="ctx" hash="0"/>
     <Define name="seext" hash="0"/>
-    <Define name="lprp" hash="4334526812545670754">
+    <Define name="lprp" hash="15507380430276620211">
         <Set>
             <Id value="PRESSURES" typref="0"/>
             <Enumerated_Values>
@@ -27,19 +27,77 @@
                 <Id value="PRESSURE_OTHER" typref="1"/>
             </Enumerated_Values>
         </Set>
+        <Set>
+            <Id value="OBJECTIVES" typref="0"/>
+            <Enumerated_Values>
+                <Id value="OBJ_OPEN_DOOR_A" typref="1"/>
+                <Id value="OBJ_OPEN_DOOR_B" typref="1"/>
+                <Id value="OBJ_NONE" typref="1"/>
+            </Enumerated_Values>
+        </Set>
+        <Set>
+            <Id value="ACTIONS" typref="0"/>
+            <Enumerated_Values>
+                <Id value="NONE" typref="1"/>
+                <Id value="TRANSLATE_OPEN_DOOR_A" typref="1"/>
+                <Id value="TRANSLATE_OPEN_DOOR_B" typref="1"/>
+                <Id value="TRANSLATE_CLOSE_DOOR_A" typref="1"/>
+                <Id value="TRANSLATE_CLOSE_DOOR_B" typref="1"/>
+                <Id value="ADAPT_PRESSURE_L_TO_A" typref="1"/>
+                <Id value="ADAPT_PRESSURE_L_TO_B" typref="1"/>
+            </Enumerated_Values>
+        </Set>
+        <Set>
+            <Id value="AUTHENTICATED" typref="0"/>
+            <Enumerated_Values>
+                <Id value="AUTHENTICATED_A" typref="1"/>
+                <Id value="AUTHENTICATED_L" typref="1"/>
+                <Id value="AUTHENTICATED_B" typref="1"/>
+                <Id value="AUTHENTICATED_NONE" typref="1"/>
+            </Enumerated_Values>
+        </Set>
     </Define>
     <Define name="inprp" hash="0"/>
     <Define name="inext" hash="0"/>
     <Define name="inv" hash="0"/>
     <Define name="ass" hash="0"/>
     <Define name="cst" hash="0"/>
-    <Define name="sets" hash="4334526812545670754">
+    <Define name="sets" hash="15507380430276620211">
         <Set>
             <Id value="PRESSURES" typref="0"/>
             <Enumerated_Values>
                 <Id value="PRESSURE_A" typref="1"/>
                 <Id value="PRESSURE_B" typref="1"/>
                 <Id value="PRESSURE_OTHER" typref="1"/>
+            </Enumerated_Values>
+        </Set>
+        <Set>
+            <Id value="OBJECTIVES" typref="0"/>
+            <Enumerated_Values>
+                <Id value="OBJ_OPEN_DOOR_A" typref="1"/>
+                <Id value="OBJ_OPEN_DOOR_B" typref="1"/>
+                <Id value="OBJ_NONE" typref="1"/>
+            </Enumerated_Values>
+        </Set>
+        <Set>
+            <Id value="ACTIONS" typref="0"/>
+            <Enumerated_Values>
+                <Id value="NONE" typref="1"/>
+                <Id value="TRANSLATE_OPEN_DOOR_A" typref="1"/>
+                <Id value="TRANSLATE_OPEN_DOOR_B" typref="1"/>
+                <Id value="TRANSLATE_CLOSE_DOOR_A" typref="1"/>
+                <Id value="TRANSLATE_CLOSE_DOOR_B" typref="1"/>
+                <Id value="ADAPT_PRESSURE_L_TO_A" typref="1"/>
+                <Id value="ADAPT_PRESSURE_L_TO_B" typref="1"/>
+            </Enumerated_Values>
+        </Set>
+        <Set>
+            <Id value="AUTHENTICATED" typref="0"/>
+            <Enumerated_Values>
+                <Id value="AUTHENTICATED_A" typref="1"/>
+                <Id value="AUTHENTICATED_L" typref="1"/>
+                <Id value="AUTHENTICATED_B" typref="1"/>
+                <Id value="AUTHENTICATED_NONE" typref="1"/>
             </Enumerated_Values>
         </Set>
     </Define>

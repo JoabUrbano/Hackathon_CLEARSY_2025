@@ -124,9 +124,12 @@ THEORY ListSetsX IS
   Inherited_List_Enumerated(Machine(CTX))==(?);
   Inherited_List_Defered(Machine(CTX))==(?);
   Inherited_List_Sets(Machine(CTX))==(?);
-  List_Enumerated(Machine(CTX))==(PRESSURES);
+  List_Enumerated(Machine(CTX))==(PRESSURES,OBJECTIVES,ACTIONS,AUTHENTICATED);
   List_Defered(Machine(CTX))==(?);
-  List_Sets(Machine(CTX))==(PRESSURES)
+  List_Sets(Machine(CTX))==(PRESSURES,OBJECTIVES,ACTIONS,AUTHENTICATED);
+  Set_Definition(Machine(CTX),OBJECTIVES)==({OBJ_OPEN_DOOR_A,OBJ_OPEN_DOOR_B,OBJ_NONE});
+  Set_Definition(Machine(CTX),ACTIONS)==({NONE,TRANSLATE_OPEN_DOOR_A,TRANSLATE_OPEN_DOOR_B,TRANSLATE_CLOSE_DOOR_A,TRANSLATE_CLOSE_DOOR_B,ADAPT_PRESSURE_L_TO_A,ADAPT_PRESSURE_L_TO_B});
+  Set_Definition(Machine(CTX),AUTHENTICATED)==({AUTHENTICATED_A,AUTHENTICATED_L,AUTHENTICATED_B,AUTHENTICATED_NONE})
 END
 &
 THEORY ListHiddenConstantsX IS
@@ -140,7 +143,7 @@ THEORY ListPropertiesX IS
   Abstract_List_Properties(Machine(CTX))==(btrue);
   Context_List_Properties(Machine(CTX))==(btrue);
   Inherited_List_Properties(Machine(CTX))==(btrue);
-  List_Properties(Machine(CTX))==(PRESSURES: FIN(INTEGER) & not(PRESSURES = {}))
+  List_Properties(Machine(CTX))==(PRESSURES: FIN(INTEGER) & not(PRESSURES = {}) & OBJECTIVES: FIN(INTEGER) & not(OBJECTIVES = {}) & ACTIONS: FIN(INTEGER) & not(ACTIONS = {}) & AUTHENTICATED: FIN(INTEGER) & not(AUTHENTICATED = {}))
 END
 &
 THEORY ListSeenInfoX END
@@ -148,7 +151,7 @@ THEORY ListSeenInfoX END
 THEORY ListANYVarX END
 &
 THEORY ListOfIdsX IS
-  List_Of_Ids(Machine(CTX)) == (PRESSURES,PRESSURE_A,PRESSURE_B,PRESSURE_OTHER | ? | ? | ? | ? | ? | ? | ? | CTX);
+  List_Of_Ids(Machine(CTX)) == (PRESSURES,OBJECTIVES,ACTIONS,AUTHENTICATED,PRESSURE_A,PRESSURE_B,PRESSURE_OTHER,OBJ_OPEN_DOOR_A,OBJ_OPEN_DOOR_B,OBJ_NONE,NONE,TRANSLATE_OPEN_DOOR_A,TRANSLATE_OPEN_DOOR_B,TRANSLATE_CLOSE_DOOR_A,TRANSLATE_CLOSE_DOOR_B,ADAPT_PRESSURE_L_TO_A,ADAPT_PRESSURE_L_TO_B,AUTHENTICATED_A,AUTHENTICATED_L,AUTHENTICATED_B,AUTHENTICATED_NONE | ? | ? | ? | ? | ? | ? | ? | CTX);
   List_Of_HiddenCst_Ids(Machine(CTX)) == (? | ?);
   List_Of_VisibleCst_Ids(Machine(CTX)) == (?);
   List_Of_VisibleVar_Ids(Machine(CTX)) == (? | ?);
@@ -156,11 +159,11 @@ THEORY ListOfIdsX IS
 END
 &
 THEORY SetsEnvX IS
-  Sets(Machine(CTX)) == (Type(PRESSURES) == Cst(SetOf(etype(PRESSURES,0,2))))
+  Sets(Machine(CTX)) == (Type(PRESSURES) == Cst(SetOf(etype(PRESSURES,0,2)));Type(OBJECTIVES) == Cst(SetOf(etype(OBJECTIVES,0,2)));Type(ACTIONS) == Cst(SetOf(etype(ACTIONS,0,6)));Type(AUTHENTICATED) == Cst(SetOf(etype(AUTHENTICATED,0,3))))
 END
 &
 THEORY ConstantsEnvX IS
-  Constants(Machine(CTX)) == (Type(PRESSURE_A) == Cst(etype(PRESSURES,0,2));Type(PRESSURE_B) == Cst(etype(PRESSURES,0,2));Type(PRESSURE_OTHER) == Cst(etype(PRESSURES,0,2)))
+  Constants(Machine(CTX)) == (Type(PRESSURE_A) == Cst(etype(PRESSURES,0,2));Type(PRESSURE_B) == Cst(etype(PRESSURES,0,2));Type(PRESSURE_OTHER) == Cst(etype(PRESSURES,0,2));Type(OBJ_OPEN_DOOR_A) == Cst(etype(OBJECTIVES,0,2));Type(OBJ_OPEN_DOOR_B) == Cst(etype(OBJECTIVES,0,2));Type(OBJ_NONE) == Cst(etype(OBJECTIVES,0,2));Type(NONE) == Cst(etype(ACTIONS,0,6));Type(TRANSLATE_OPEN_DOOR_A) == Cst(etype(ACTIONS,0,6));Type(TRANSLATE_OPEN_DOOR_B) == Cst(etype(ACTIONS,0,6));Type(TRANSLATE_CLOSE_DOOR_A) == Cst(etype(ACTIONS,0,6));Type(TRANSLATE_CLOSE_DOOR_B) == Cst(etype(ACTIONS,0,6));Type(ADAPT_PRESSURE_L_TO_A) == Cst(etype(ACTIONS,0,6));Type(ADAPT_PRESSURE_L_TO_B) == Cst(etype(ACTIONS,0,6));Type(AUTHENTICATED_A) == Cst(etype(AUTHENTICATED,0,3));Type(AUTHENTICATED_L) == Cst(etype(AUTHENTICATED,0,3));Type(AUTHENTICATED_B) == Cst(etype(AUTHENTICATED,0,3));Type(AUTHENTICATED_NONE) == Cst(etype(AUTHENTICATED,0,3)))
 END
 &
 THEORY TCIntRdX IS
