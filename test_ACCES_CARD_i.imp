@@ -1,0 +1,31 @@
+IMPLEMENTATION test_ACCES_CARD_i
+REFINES test_ACCES_CARD
+
+IMPORTS ACCES_CARD
+    
+SEES test_ACCES_CARD_ctx
+
+CONCRETE_VARIABLES
+    oks
+
+INVARIANT
+    oks : 0..2 --> BOOL
+
+INITIALISATION
+    oks := (0..2) * {FALSE}
+
+OPERATIONS
+    test_is_valid =
+    VAR ok IN
+
+        ok <-- is_valid(tab1);
+        oks(0) := ok;
+
+        ok <-- is_valid(tab2);
+        oks(1) := ok;
+
+        ok <-- is_valid(tab3);
+        oks(2) := ok
+    END
+
+END

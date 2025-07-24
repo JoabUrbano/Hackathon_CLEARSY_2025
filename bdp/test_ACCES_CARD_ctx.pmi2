@@ -1,0 +1,16 @@
+THEORY BalanceX IS
+test_ACCES_CARD_ctx,0,0,0,0,0,0,0
+END
+&
+THEORY ProofState
+END
+&
+THEORY MethodList
+END
+&
+THEORY PassList
+END
+&
+THEORY Status IS
+test_ACCES_CARD_ctx,0,0,0,0,0,0
+END

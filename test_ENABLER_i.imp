@@ -1,0 +1,15 @@
+IMPLEMENTATION test_ENABLER_i
+
+REFINES test_ENABLER
+
+IMPORTS
+    CTX, SENSORS, ENABLER
+    
+OPERATIONS
+    test_compute_enabling =
+        BEGIN
+            update_sensors_states;
+            compute_enabling
+        END
+
+END

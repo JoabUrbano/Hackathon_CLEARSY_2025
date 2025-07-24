@@ -1,0 +1,617 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Proof_Obligations xmlns="https://www.atelierb.eu/Formats/pog" version="1.0">
+    <Define name="B definitions" hash="7128875304803749033">
+        <Exp_Comparison op="=">
+            <Id value="NAT" typref="0"/>
+            <Binary_Exp op=".." typref="0">
+                <Integer_Literal value="0" typref="1"/>
+                <Id value="MAXINT" typref="1"/>
+            </Binary_Exp>
+        </Exp_Comparison>
+        <Exp_Comparison op="=">
+            <Id value="INT" typref="0"/>
+            <Binary_Exp op=".." typref="0">
+                <Id value="MININT" typref="1"/>
+                <Id value="MAXINT" typref="1"/>
+            </Binary_Exp>
+        </Exp_Comparison>
+    </Define>
+    <Define name="ctx" hash="0"/>
+    <Define name="seext" hash="0"/>
+    <Define name="lprp" hash="0"/>
+    <Define name="inprp" hash="0"/>
+    <Define name="inext" hash="0"/>
+    <Define name="inv" hash="0"/>
+    <Define name="ass" hash="0"/>
+    <Define name="cst" hash="0"/>
+    <Define name="sets" hash="0"/>
+    <Proof_Obligation goalHash="13256206468786001739">
+        <Tag>WellDefinedness_is_valid</Tag>
+        <Definition name="B definitions"/>
+        <Definition name="ctx"/>
+        <Definition name="cst"/>
+        <Definition name="lprp"/>
+        <Definition name="inprp"/>
+        <Definition name="inext"/>
+        <Definition name="seext"/>
+        <Definition name="inv"/>
+        <Definition name="ass"/>
+        <Hypothesis>
+            <Exp_Comparison op=":">
+                <Id value="tab" typref="2" tag="C:\Users\Joab\Desktop\rackathom\bdp\ACCES_CARD.bxml:1:2:1:3:1:1"/>
+                <Binary_Exp op="--&gt;" typref="3">
+                    <Binary_Exp op=".." typref="0">
+                        <Integer_Literal value="0" typref="1" tag="C:\Users\Joab\Desktop\rackathom\bdp\ACCES_CARD.bxml:1:2:1:3:1:2:1:1"/>
+                        <Integer_Literal value="15" typref="1" tag="C:\Users\Joab\Desktop\rackathom\bdp\ACCES_CARD.bxml:1:2:1:3:1:2:1:2"/>
+                    </Binary_Exp>
+                    <Binary_Exp op=".." typref="0">
+                        <Integer_Literal value="0" typref="1" tag="C:\Users\Joab\Desktop\rackathom\bdp\ACCES_CARD.bxml:1:2:1:3:1:2:2:1"/>
+                        <Integer_Literal value="9" typref="1" tag="C:\Users\Joab\Desktop\rackathom\bdp\ACCES_CARD.bxml:1:2:1:3:1:2:2:2"/>
+                    </Binary_Exp>
+                </Binary_Exp>
+            </Exp_Comparison>
+        </Hypothesis>
+        <Local_Hyp num="1">
+            <Exp_Comparison op=":">
+                <Id value="xx" typref="1" tag="C:\Users\Joab\Desktop\rackathom\bdp\ACCES_CARD.bxml:1:2:1:4:1:2:1:1:1:1:1:1:2:1:1:1"/>
+                <Unary_Exp op="dom" typref="0">
+                    <Id value="tab" typref="2" tag="C:\Users\Joab\Desktop\rackathom\bdp\ACCES_CARD.bxml:1:2:1:4:1:2:1:1:1:1:1:1:2:1:1:2:1"/>
+                </Unary_Exp>
+            </Exp_Comparison>
+        </Local_Hyp>
+        <Local_Hyp num="2">
+            <Unary_Pred op="not">
+                <Exp_Comparison op="=">
+                    <Binary_Exp op="mod" typref="1">
+                        <Id value="xx" typref="1" tag="C:\Users\Joab\Desktop\rackathom\bdp\ACCES_CARD.bxml:1:2:1:4:1:2:1:1:1:1:1:1:2:1:2:1:1"/>
+                        <Integer_Literal value="2" typref="1" tag="C:\Users\Joab\Desktop\rackathom\bdp\ACCES_CARD.bxml:1:2:1:4:1:2:1:1:1:1:1:1:2:1:2:1:2"/>
+                    </Binary_Exp>
+                    <Integer_Literal value="0" typref="1" tag="C:\Users\Joab\Desktop\rackathom\bdp\ACCES_CARD.bxml:1:2:1:4:1:2:1:1:1:1:1:1:2:1:2:2"/>
+                </Exp_Comparison>
+            </Unary_Pred>
+        </Local_Hyp>
+        <Local_Hyp num="3">
+            <Exp_Comparison op="=">
+                <Binary_Exp op="mod" typref="1">
+                    <Id value="xx" typref="1" tag="C:\Users\Joab\Desktop\rackathom\bdp\ACCES_CARD.bxml:1:2:1:4:1:2:1:1:1:1:1:2:2:1:2:1:1"/>
+                    <Integer_Literal value="2" typref="1" tag="C:\Users\Joab\Desktop\rackathom\bdp\ACCES_CARD.bxml:1:2:1:4:1:2:1:1:1:1:1:2:2:1:2:1:2"/>
+                </Binary_Exp>
+                <Integer_Literal value="0" typref="1" tag="C:\Users\Joab\Desktop\rackathom\bdp\ACCES_CARD.bxml:1:2:1:4:1:2:1:1:1:1:1:2:2:1:2:2"/>
+            </Exp_Comparison>
+        </Local_Hyp>
+        <Local_Hyp num="4">
+            <Exp_Comparison op="&lt;i">
+                <Binary_Exp op="*i" typref="1">
+                    <Binary_Exp op="(" typref="1">
+                        <Id value="tab" typref="2" tag="C:\Users\Joab\Desktop\rackathom\bdp\ACCES_CARD.bxml:1:2:1:4:1:2:1:1:1:1:1:2:2:1:3:1:1:1"/>
+                        <Id value="xx" typref="1" tag="C:\Users\Joab\Desktop\rackathom\bdp\ACCES_CARD.bxml:1:2:1:4:1:2:1:1:1:1:1:2:2:1:3:1:1:2"/>
+                    </Binary_Exp>
+                    <Integer_Literal value="2" typref="1" tag="C:\Users\Joab\Desktop\rackathom\bdp\ACCES_CARD.bxml:1:2:1:4:1:2:1:1:1:1:1:2:2:1:3:1:2"/>
+                </Binary_Exp>
+                <Integer_Literal value="9" typref="1" tag="C:\Users\Joab\Desktop\rackathom\bdp\ACCES_CARD.bxml:1:2:1:4:1:2:1:1:1:1:1:2:2:1:3:2"/>
+            </Exp_Comparison>
+        </Local_Hyp>
+        <Local_Hyp num="5">
+            <Exp_Comparison op="&gt;i">
+                <Binary_Exp op="*i" typref="1">
+                    <Binary_Exp op="(" typref="1">
+                        <Id value="tab" typref="2" tag="C:\Users\Joab\Desktop\rackathom\bdp\ACCES_CARD.bxml:1:2:1:4:1:2:1:1:1:1:2:2:1:3:1:1:1"/>
+                        <Id value="xx" typref="1" tag="C:\Users\Joab\Desktop\rackathom\bdp\ACCES_CARD.bxml:1:2:1:4:1:2:1:1:1:1:2:2:1:3:1:1:2"/>
+                    </Binary_Exp>
+                    <Integer_Literal value="2" typref="1" tag="C:\Users\Joab\Desktop\rackathom\bdp\ACCES_CARD.bxml:1:2:1:4:1:2:1:1:1:1:2:2:1:3:1:2"/>
+                </Binary_Exp>
+                <Integer_Literal value="9" typref="1" tag="C:\Users\Joab\Desktop\rackathom\bdp\ACCES_CARD.bxml:1:2:1:4:1:2:1:1:1:1:2:2:1:3:2"/>
+            </Exp_Comparison>
+        </Local_Hyp>
+        <Simple_Goal>
+            <Tag>Operation is well defined</Tag>
+            <Goal>
+                <Exp_Comparison op=":">
+                    <Quantified_Set typref="0">
+                        <Variables>
+                            <Id value="xx" typref="1"/>
+                        </Variables>
+                        <Body>
+                            <Nary_Pred op="&amp;">
+                                <Exp_Comparison op=":">
+                                    <Id value="xx" typref="1" tag="C:\Users\Joab\Desktop\rackathom\bdp\ACCES_CARD.bxml:1:2:1:4:1:2:1:1:1:1:1:1:2:1:1:1"/>
+                                    <Unary_Exp op="dom" typref="0">
+                                        <Id value="tab" typref="2" tag="C:\Users\Joab\Desktop\rackathom\bdp\ACCES_CARD.bxml:1:2:1:4:1:2:1:1:1:1:1:1:2:1:1:2:1"/>
+                                    </Unary_Exp>
+                                </Exp_Comparison>
+                                <Unary_Pred op="not">
+                                    <Exp_Comparison op="=">
+                                        <Binary_Exp op="mod" typref="1">
+                                            <Id value="xx" typref="1" tag="C:\Users\Joab\Desktop\rackathom\bdp\ACCES_CARD.bxml:1:2:1:4:1:2:1:1:1:1:1:1:2:1:2:1:1"/>
+                                            <Integer_Literal value="2" typref="1" tag="C:\Users\Joab\Desktop\rackathom\bdp\ACCES_CARD.bxml:1:2:1:4:1:2:1:1:1:1:1:1:2:1:2:1:2"/>
+                                        </Binary_Exp>
+                                        <Integer_Literal value="0" typref="1" tag="C:\Users\Joab\Desktop\rackathom\bdp\ACCES_CARD.bxml:1:2:1:4:1:2:1:1:1:1:1:1:2:1:2:2"/>
+                                    </Exp_Comparison>
+                                </Unary_Pred>
+                            </Nary_Pred>
+                        </Body>
+                    </Quantified_Set>
+                    <Unary_Exp op="FIN" typref="4">
+                        <Quantified_Set typref="0">
+                            <Variables>
+                                <Id value="xx" typref="1"/>
+                            </Variables>
+                            <Body>
+                                <Nary_Pred op="&amp;">
+                                    <Exp_Comparison op=":">
+                                        <Id value="xx" typref="1" tag="C:\Users\Joab\Desktop\rackathom\bdp\ACCES_CARD.bxml:1:2:1:4:1:2:1:1:1:1:1:1:2:1:1:1"/>
+                                        <Unary_Exp op="dom" typref="0">
+                                            <Id value="tab" typref="2" tag="C:\Users\Joab\Desktop\rackathom\bdp\ACCES_CARD.bxml:1:2:1:4:1:2:1:1:1:1:1:1:2:1:1:2:1"/>
+                                        </Unary_Exp>
+                                    </Exp_Comparison>
+                                    <Unary_Pred op="not">
+                                        <Exp_Comparison op="=">
+                                            <Binary_Exp op="mod" typref="1">
+                                                <Id value="xx" typref="1" tag="C:\Users\Joab\Desktop\rackathom\bdp\ACCES_CARD.bxml:1:2:1:4:1:2:1:1:1:1:1:1:2:1:2:1:1"/>
+                                                <Integer_Literal value="2" typref="1" tag="C:\Users\Joab\Desktop\rackathom\bdp\ACCES_CARD.bxml:1:2:1:4:1:2:1:1:1:1:1:1:2:1:2:1:2"/>
+                                            </Binary_Exp>
+                                            <Integer_Literal value="0" typref="1" tag="C:\Users\Joab\Desktop\rackathom\bdp\ACCES_CARD.bxml:1:2:1:4:1:2:1:1:1:1:1:1:2:1:2:2"/>
+                                        </Exp_Comparison>
+                                    </Unary_Pred>
+                                </Nary_Pred>
+                            </Body>
+                        </Quantified_Set>
+                    </Unary_Exp>
+                </Exp_Comparison>
+            </Goal>
+        </Simple_Goal>
+        <Simple_Goal>
+            <Tag>Operation is well defined</Tag>
+            <Ref_Hyp num="1"/>
+            <Goal>
+                <Exp_Comparison op="&lt;=i">
+                    <Integer_Literal value="0" typref="1"/>
+                    <Id value="xx" typref="1" tag="C:\Users\Joab\Desktop\rackathom\bdp\ACCES_CARD.bxml:1:2:1:4:1:2:1:1:1:1:1:1:2:1:2:1:1"/>
+                </Exp_Comparison>
+            </Goal>
+        </Simple_Goal>
+        <Simple_Goal>
+            <Tag>Operation is well defined</Tag>
+            <Ref_Hyp num="1"/>
+            <Goal>
+                <Exp_Comparison op="&lt;=i">
+                    <Integer_Literal value="1" typref="1"/>
+                    <Integer_Literal value="2" typref="1" tag="C:\Users\Joab\Desktop\rackathom\bdp\ACCES_CARD.bxml:1:2:1:4:1:2:1:1:1:1:1:1:2:1:2:1:2"/>
+                </Exp_Comparison>
+            </Goal>
+        </Simple_Goal>
+        <Simple_Goal>
+            <Tag>Operation is well defined</Tag>
+            <Ref_Hyp num="1"/>
+            <Ref_Hyp num="2"/>
+            <Goal>
+                <Exp_Comparison op=":">
+                    <Id value="tab" typref="2" tag="C:\Users\Joab\Desktop\rackathom\bdp\ACCES_CARD.bxml:1:2:1:4:1:2:1:1:1:1:1:1:3:1:1"/>
+                    <Binary_Exp op="+-&gt;" typref="3">
+                        <Unary_Exp op="dom" typref="0">
+                            <Id value="tab" typref="2" tag="C:\Users\Joab\Desktop\rackathom\bdp\ACCES_CARD.bxml:1:2:1:4:1:2:1:1:1:1:1:1:3:1:1"/>
+                        </Unary_Exp>
+                        <Unary_Exp op="ran" typref="0">
+                            <Id value="tab" typref="2" tag="C:\Users\Joab\Desktop\rackathom\bdp\ACCES_CARD.bxml:1:2:1:4:1:2:1:1:1:1:1:1:3:1:1"/>
+                        </Unary_Exp>
+                    </Binary_Exp>
+                </Exp_Comparison>
+            </Goal>
+        </Simple_Goal>
+        <Simple_Goal>
+            <Tag>Operation is well defined</Tag>
+            <Goal>
+                <Exp_Comparison op=":">
+                    <Quantified_Set typref="0">
+                        <Variables>
+                            <Id value="xx" typref="1"/>
+                        </Variables>
+                        <Body>
+                            <Nary_Pred op="&amp;">
+                                <Exp_Comparison op=":">
+                                    <Id value="xx" typref="1" tag="C:\Users\Joab\Desktop\rackathom\bdp\ACCES_CARD.bxml:1:2:1:4:1:2:1:1:1:1:1:2:2:1:1:1"/>
+                                    <Unary_Exp op="dom" typref="0">
+                                        <Id value="tab" typref="2" tag="C:\Users\Joab\Desktop\rackathom\bdp\ACCES_CARD.bxml:1:2:1:4:1:2:1:1:1:1:1:2:2:1:1:2:1"/>
+                                    </Unary_Exp>
+                                </Exp_Comparison>
+                                <Exp_Comparison op="=">
+                                    <Binary_Exp op="mod" typref="1">
+                                        <Id value="xx" typref="1" tag="C:\Users\Joab\Desktop\rackathom\bdp\ACCES_CARD.bxml:1:2:1:4:1:2:1:1:1:1:1:2:2:1:2:1:1"/>
+                                        <Integer_Literal value="2" typref="1" tag="C:\Users\Joab\Desktop\rackathom\bdp\ACCES_CARD.bxml:1:2:1:4:1:2:1:1:1:1:1:2:2:1:2:1:2"/>
+                                    </Binary_Exp>
+                                    <Integer_Literal value="0" typref="1" tag="C:\Users\Joab\Desktop\rackathom\bdp\ACCES_CARD.bxml:1:2:1:4:1:2:1:1:1:1:1:2:2:1:2:2"/>
+                                </Exp_Comparison>
+                                <Exp_Comparison op="&lt;i">
+                                    <Binary_Exp op="*i" typref="1">
+                                        <Binary_Exp op="(" typref="1">
+                                            <Id value="tab" typref="2" tag="C:\Users\Joab\Desktop\rackathom\bdp\ACCES_CARD.bxml:1:2:1:4:1:2:1:1:1:1:1:2:2:1:3:1:1:1"/>
+                                            <Id value="xx" typref="1" tag="C:\Users\Joab\Desktop\rackathom\bdp\ACCES_CARD.bxml:1:2:1:4:1:2:1:1:1:1:1:2:2:1:3:1:1:2"/>
+                                        </Binary_Exp>
+                                        <Integer_Literal value="2" typref="1" tag="C:\Users\Joab\Desktop\rackathom\bdp\ACCES_CARD.bxml:1:2:1:4:1:2:1:1:1:1:1:2:2:1:3:1:2"/>
+                                    </Binary_Exp>
+                                    <Integer_Literal value="9" typref="1" tag="C:\Users\Joab\Desktop\rackathom\bdp\ACCES_CARD.bxml:1:2:1:4:1:2:1:1:1:1:1:2:2:1:3:2"/>
+                                </Exp_Comparison>
+                            </Nary_Pred>
+                        </Body>
+                    </Quantified_Set>
+                    <Unary_Exp op="FIN" typref="4">
+                        <Quantified_Set typref="0">
+                            <Variables>
+                                <Id value="xx" typref="1"/>
+                            </Variables>
+                            <Body>
+                                <Nary_Pred op="&amp;">
+                                    <Exp_Comparison op=":">
+                                        <Id value="xx" typref="1" tag="C:\Users\Joab\Desktop\rackathom\bdp\ACCES_CARD.bxml:1:2:1:4:1:2:1:1:1:1:1:2:2:1:1:1"/>
+                                        <Unary_Exp op="dom" typref="0">
+                                            <Id value="tab" typref="2" tag="C:\Users\Joab\Desktop\rackathom\bdp\ACCES_CARD.bxml:1:2:1:4:1:2:1:1:1:1:1:2:2:1:1:2:1"/>
+                                        </Unary_Exp>
+                                    </Exp_Comparison>
+                                    <Exp_Comparison op="=">
+                                        <Binary_Exp op="mod" typref="1">
+                                            <Id value="xx" typref="1" tag="C:\Users\Joab\Desktop\rackathom\bdp\ACCES_CARD.bxml:1:2:1:4:1:2:1:1:1:1:1:2:2:1:2:1:1"/>
+                                            <Integer_Literal value="2" typref="1" tag="C:\Users\Joab\Desktop\rackathom\bdp\ACCES_CARD.bxml:1:2:1:4:1:2:1:1:1:1:1:2:2:1:2:1:2"/>
+                                        </Binary_Exp>
+                                        <Integer_Literal value="0" typref="1" tag="C:\Users\Joab\Desktop\rackathom\bdp\ACCES_CARD.bxml:1:2:1:4:1:2:1:1:1:1:1:2:2:1:2:2"/>
+                                    </Exp_Comparison>
+                                    <Exp_Comparison op="&lt;i">
+                                        <Binary_Exp op="*i" typref="1">
+                                            <Binary_Exp op="(" typref="1">
+                                                <Id value="tab" typref="2" tag="C:\Users\Joab\Desktop\rackathom\bdp\ACCES_CARD.bxml:1:2:1:4:1:2:1:1:1:1:1:2:2:1:3:1:1:1"/>
+                                                <Id value="xx" typref="1" tag="C:\Users\Joab\Desktop\rackathom\bdp\ACCES_CARD.bxml:1:2:1:4:1:2:1:1:1:1:1:2:2:1:3:1:1:2"/>
+                                            </Binary_Exp>
+                                            <Integer_Literal value="2" typref="1" tag="C:\Users\Joab\Desktop\rackathom\bdp\ACCES_CARD.bxml:1:2:1:4:1:2:1:1:1:1:1:2:2:1:3:1:2"/>
+                                        </Binary_Exp>
+                                        <Integer_Literal value="9" typref="1" tag="C:\Users\Joab\Desktop\rackathom\bdp\ACCES_CARD.bxml:1:2:1:4:1:2:1:1:1:1:1:2:2:1:3:2"/>
+                                    </Exp_Comparison>
+                                </Nary_Pred>
+                            </Body>
+                        </Quantified_Set>
+                    </Unary_Exp>
+                </Exp_Comparison>
+            </Goal>
+        </Simple_Goal>
+        <Simple_Goal>
+            <Tag>Operation is well defined</Tag>
+            <Ref_Hyp num="1"/>
+            <Ref_Hyp num="3"/>
+            <Goal>
+                <Exp_Comparison op=":">
+                    <Id value="tab" typref="2" tag="C:\Users\Joab\Desktop\rackathom\bdp\ACCES_CARD.bxml:1:2:1:4:1:2:1:1:1:1:1:2:2:1:3:1:1:1"/>
+                    <Binary_Exp op="+-&gt;" typref="3">
+                        <Unary_Exp op="dom" typref="0">
+                            <Id value="tab" typref="2" tag="C:\Users\Joab\Desktop\rackathom\bdp\ACCES_CARD.bxml:1:2:1:4:1:2:1:1:1:1:1:2:2:1:3:1:1:1"/>
+                        </Unary_Exp>
+                        <Unary_Exp op="ran" typref="0">
+                            <Id value="tab" typref="2" tag="C:\Users\Joab\Desktop\rackathom\bdp\ACCES_CARD.bxml:1:2:1:4:1:2:1:1:1:1:1:2:2:1:3:1:1:1"/>
+                        </Unary_Exp>
+                    </Binary_Exp>
+                </Exp_Comparison>
+            </Goal>
+        </Simple_Goal>
+        <Simple_Goal>
+            <Tag>Operation is well defined</Tag>
+            <Ref_Hyp num="1"/>
+            <Ref_Hyp num="3"/>
+            <Ref_Hyp num="4"/>
+            <Goal>
+                <Exp_Comparison op=":">
+                    <Id value="tab" typref="2" tag="C:\Users\Joab\Desktop\rackathom\bdp\ACCES_CARD.bxml:1:2:1:4:1:2:1:1:1:1:1:2:3:1:1:1"/>
+                    <Binary_Exp op="+-&gt;" typref="3">
+                        <Unary_Exp op="dom" typref="0">
+                            <Id value="tab" typref="2" tag="C:\Users\Joab\Desktop\rackathom\bdp\ACCES_CARD.bxml:1:2:1:4:1:2:1:1:1:1:1:2:3:1:1:1"/>
+                        </Unary_Exp>
+                        <Unary_Exp op="ran" typref="0">
+                            <Id value="tab" typref="2" tag="C:\Users\Joab\Desktop\rackathom\bdp\ACCES_CARD.bxml:1:2:1:4:1:2:1:1:1:1:1:2:3:1:1:1"/>
+                        </Unary_Exp>
+                    </Binary_Exp>
+                </Exp_Comparison>
+            </Goal>
+        </Simple_Goal>
+        <Simple_Goal>
+            <Tag>Operation is well defined</Tag>
+            <Goal>
+                <Exp_Comparison op=":">
+                    <Quantified_Set typref="0">
+                        <Variables>
+                            <Id value="xx" typref="1"/>
+                        </Variables>
+                        <Body>
+                            <Nary_Pred op="&amp;">
+                                <Exp_Comparison op=":">
+                                    <Id value="xx" typref="1" tag="C:\Users\Joab\Desktop\rackathom\bdp\ACCES_CARD.bxml:1:2:1:4:1:2:1:1:1:1:2:2:1:1:1"/>
+                                    <Unary_Exp op="dom" typref="0">
+                                        <Id value="tab" typref="2" tag="C:\Users\Joab\Desktop\rackathom\bdp\ACCES_CARD.bxml:1:2:1:4:1:2:1:1:1:1:2:2:1:1:2:1"/>
+                                    </Unary_Exp>
+                                </Exp_Comparison>
+                                <Exp_Comparison op="=">
+                                    <Binary_Exp op="mod" typref="1">
+                                        <Id value="xx" typref="1" tag="C:\Users\Joab\Desktop\rackathom\bdp\ACCES_CARD.bxml:1:2:1:4:1:2:1:1:1:1:2:2:1:2:1:1"/>
+                                        <Integer_Literal value="2" typref="1" tag="C:\Users\Joab\Desktop\rackathom\bdp\ACCES_CARD.bxml:1:2:1:4:1:2:1:1:1:1:2:2:1:2:1:2"/>
+                                    </Binary_Exp>
+                                    <Integer_Literal value="0" typref="1" tag="C:\Users\Joab\Desktop\rackathom\bdp\ACCES_CARD.bxml:1:2:1:4:1:2:1:1:1:1:2:2:1:2:2"/>
+                                </Exp_Comparison>
+                                <Exp_Comparison op="&gt;i">
+                                    <Binary_Exp op="*i" typref="1">
+                                        <Binary_Exp op="(" typref="1">
+                                            <Id value="tab" typref="2" tag="C:\Users\Joab\Desktop\rackathom\bdp\ACCES_CARD.bxml:1:2:1:4:1:2:1:1:1:1:2:2:1:3:1:1:1"/>
+                                            <Id value="xx" typref="1" tag="C:\Users\Joab\Desktop\rackathom\bdp\ACCES_CARD.bxml:1:2:1:4:1:2:1:1:1:1:2:2:1:3:1:1:2"/>
+                                        </Binary_Exp>
+                                        <Integer_Literal value="2" typref="1" tag="C:\Users\Joab\Desktop\rackathom\bdp\ACCES_CARD.bxml:1:2:1:4:1:2:1:1:1:1:2:2:1:3:1:2"/>
+                                    </Binary_Exp>
+                                    <Integer_Literal value="9" typref="1" tag="C:\Users\Joab\Desktop\rackathom\bdp\ACCES_CARD.bxml:1:2:1:4:1:2:1:1:1:1:2:2:1:3:2"/>
+                                </Exp_Comparison>
+                            </Nary_Pred>
+                        </Body>
+                    </Quantified_Set>
+                    <Unary_Exp op="FIN" typref="4">
+                        <Quantified_Set typref="0">
+                            <Variables>
+                                <Id value="xx" typref="1"/>
+                            </Variables>
+                            <Body>
+                                <Nary_Pred op="&amp;">
+                                    <Exp_Comparison op=":">
+                                        <Id value="xx" typref="1" tag="C:\Users\Joab\Desktop\rackathom\bdp\ACCES_CARD.bxml:1:2:1:4:1:2:1:1:1:1:2:2:1:1:1"/>
+                                        <Unary_Exp op="dom" typref="0">
+                                            <Id value="tab" typref="2" tag="C:\Users\Joab\Desktop\rackathom\bdp\ACCES_CARD.bxml:1:2:1:4:1:2:1:1:1:1:2:2:1:1:2:1"/>
+                                        </Unary_Exp>
+                                    </Exp_Comparison>
+                                    <Exp_Comparison op="=">
+                                        <Binary_Exp op="mod" typref="1">
+                                            <Id value="xx" typref="1" tag="C:\Users\Joab\Desktop\rackathom\bdp\ACCES_CARD.bxml:1:2:1:4:1:2:1:1:1:1:2:2:1:2:1:1"/>
+                                            <Integer_Literal value="2" typref="1" tag="C:\Users\Joab\Desktop\rackathom\bdp\ACCES_CARD.bxml:1:2:1:4:1:2:1:1:1:1:2:2:1:2:1:2"/>
+                                        </Binary_Exp>
+                                        <Integer_Literal value="0" typref="1" tag="C:\Users\Joab\Desktop\rackathom\bdp\ACCES_CARD.bxml:1:2:1:4:1:2:1:1:1:1:2:2:1:2:2"/>
+                                    </Exp_Comparison>
+                                    <Exp_Comparison op="&gt;i">
+                                        <Binary_Exp op="*i" typref="1">
+                                            <Binary_Exp op="(" typref="1">
+                                                <Id value="tab" typref="2" tag="C:\Users\Joab\Desktop\rackathom\bdp\ACCES_CARD.bxml:1:2:1:4:1:2:1:1:1:1:2:2:1:3:1:1:1"/>
+                                                <Id value="xx" typref="1" tag="C:\Users\Joab\Desktop\rackathom\bdp\ACCES_CARD.bxml:1:2:1:4:1:2:1:1:1:1:2:2:1:3:1:1:2"/>
+                                            </Binary_Exp>
+                                            <Integer_Literal value="2" typref="1" tag="C:\Users\Joab\Desktop\rackathom\bdp\ACCES_CARD.bxml:1:2:1:4:1:2:1:1:1:1:2:2:1:3:1:2"/>
+                                        </Binary_Exp>
+                                        <Integer_Literal value="9" typref="1" tag="C:\Users\Joab\Desktop\rackathom\bdp\ACCES_CARD.bxml:1:2:1:4:1:2:1:1:1:1:2:2:1:3:2"/>
+                                    </Exp_Comparison>
+                                </Nary_Pred>
+                            </Body>
+                        </Quantified_Set>
+                    </Unary_Exp>
+                </Exp_Comparison>
+            </Goal>
+        </Simple_Goal>
+        <Simple_Goal>
+            <Tag>Operation is well defined</Tag>
+            <Ref_Hyp num="1"/>
+            <Ref_Hyp num="3"/>
+            <Ref_Hyp num="5"/>
+            <Goal>
+                <Exp_Comparison op=":">
+                    <Id value="tab" typref="2" tag="C:\Users\Joab\Desktop\rackathom\bdp\ACCES_CARD.bxml:1:2:1:4:1:2:1:1:1:1:2:3:1:1:1:1:1"/>
+                    <Binary_Exp op="+-&gt;" typref="3">
+                        <Unary_Exp op="dom" typref="0">
+                            <Id value="tab" typref="2" tag="C:\Users\Joab\Desktop\rackathom\bdp\ACCES_CARD.bxml:1:2:1:4:1:2:1:1:1:1:2:3:1:1:1:1:1"/>
+                        </Unary_Exp>
+                        <Unary_Exp op="ran" typref="0">
+                            <Id value="tab" typref="2" tag="C:\Users\Joab\Desktop\rackathom\bdp\ACCES_CARD.bxml:1:2:1:4:1:2:1:1:1:1:2:3:1:1:1:1:1"/>
+                        </Unary_Exp>
+                    </Binary_Exp>
+                </Exp_Comparison>
+            </Goal>
+        </Simple_Goal>
+        <Simple_Goal>
+            <Tag>Operation is well defined</Tag>
+            <Ref_Hyp num="1"/>
+            <Ref_Hyp num="3"/>
+            <Ref_Hyp num="5"/>
+            <Goal>
+                <Exp_Comparison op="&lt;=i">
+                    <Integer_Literal value="0" typref="1"/>
+                    <Binary_Exp op="*i" typref="1">
+                        <Binary_Exp op="(" typref="1">
+                            <Id value="tab" typref="2" tag="C:\Users\Joab\Desktop\rackathom\bdp\ACCES_CARD.bxml:1:2:1:4:1:2:1:1:1:1:2:3:1:2:1:1:1"/>
+                            <Id value="xx" typref="1" tag="C:\Users\Joab\Desktop\rackathom\bdp\ACCES_CARD.bxml:1:2:1:4:1:2:1:1:1:1:2:3:1:2:1:1:2"/>
+                        </Binary_Exp>
+                        <Integer_Literal value="2" typref="1" tag="C:\Users\Joab\Desktop\rackathom\bdp\ACCES_CARD.bxml:1:2:1:4:1:2:1:1:1:1:2:3:1:2:1:2"/>
+                    </Binary_Exp>
+                </Exp_Comparison>
+            </Goal>
+        </Simple_Goal>
+        <Simple_Goal>
+            <Tag>Operation is well defined</Tag>
+            <Ref_Hyp num="1"/>
+            <Ref_Hyp num="3"/>
+            <Ref_Hyp num="5"/>
+            <Goal>
+                <Exp_Comparison op="&lt;=i">
+                    <Integer_Literal value="1" typref="1"/>
+                    <Integer_Literal value="10" typref="1" tag="C:\Users\Joab\Desktop\rackathom\bdp\ACCES_CARD.bxml:1:2:1:4:1:2:1:1:1:1:2:3:1:2:2"/>
+                </Exp_Comparison>
+            </Goal>
+        </Simple_Goal>
+        <Simple_Goal>
+            <Tag>Operation is well defined</Tag>
+            <Goal>
+                <Exp_Comparison op="&lt;=i">
+                    <Integer_Literal value="0" typref="1"/>
+                    <Binary_Exp op="+i" typref="1">
+                        <Binary_Exp op="+i" typref="1">
+                            <Quantified_Exp type="iSIGMA" typref="1">
+                                <Variables>
+                                    <Id value="xx" typref="1"/>
+                                </Variables>
+                                <Pred>
+                                    <Nary_Pred op="&amp;">
+                                        <Exp_Comparison op=":">
+                                            <Id value="xx" typref="1" tag="C:\Users\Joab\Desktop\rackathom\bdp\ACCES_CARD.bxml:1:2:1:4:1:2:1:1:1:1:1:1:2:1:1:1"/>
+                                            <Unary_Exp op="dom" typref="0">
+                                                <Id value="tab" typref="2" tag="C:\Users\Joab\Desktop\rackathom\bdp\ACCES_CARD.bxml:1:2:1:4:1:2:1:1:1:1:1:1:2:1:1:2:1"/>
+                                            </Unary_Exp>
+                                        </Exp_Comparison>
+                                        <Unary_Pred op="not">
+                                            <Exp_Comparison op="=">
+                                                <Binary_Exp op="mod" typref="1">
+                                                    <Id value="xx" typref="1" tag="C:\Users\Joab\Desktop\rackathom\bdp\ACCES_CARD.bxml:1:2:1:4:1:2:1:1:1:1:1:1:2:1:2:1:1"/>
+                                                    <Integer_Literal value="2" typref="1" tag="C:\Users\Joab\Desktop\rackathom\bdp\ACCES_CARD.bxml:1:2:1:4:1:2:1:1:1:1:1:1:2:1:2:1:2"/>
+                                                </Binary_Exp>
+                                                <Integer_Literal value="0" typref="1" tag="C:\Users\Joab\Desktop\rackathom\bdp\ACCES_CARD.bxml:1:2:1:4:1:2:1:1:1:1:1:1:2:1:2:2"/>
+                                            </Exp_Comparison>
+                                        </Unary_Pred>
+                                    </Nary_Pred>
+                                </Pred>
+                                <Body>
+                                    <Binary_Exp op="(" typref="1">
+                                        <Id value="tab" typref="2" tag="C:\Users\Joab\Desktop\rackathom\bdp\ACCES_CARD.bxml:1:2:1:4:1:2:1:1:1:1:1:1:3:1:1"/>
+                                        <Id value="xx" typref="1" tag="C:\Users\Joab\Desktop\rackathom\bdp\ACCES_CARD.bxml:1:2:1:4:1:2:1:1:1:1:1:1:3:1:2"/>
+                                    </Binary_Exp>
+                                </Body>
+                            </Quantified_Exp>
+                            <Quantified_Exp type="iSIGMA" typref="1">
+                                <Variables>
+                                    <Id value="xx" typref="1"/>
+                                </Variables>
+                                <Pred>
+                                    <Nary_Pred op="&amp;">
+                                        <Exp_Comparison op=":">
+                                            <Id value="xx" typref="1" tag="C:\Users\Joab\Desktop\rackathom\bdp\ACCES_CARD.bxml:1:2:1:4:1:2:1:1:1:1:1:2:2:1:1:1"/>
+                                            <Unary_Exp op="dom" typref="0">
+                                                <Id value="tab" typref="2" tag="C:\Users\Joab\Desktop\rackathom\bdp\ACCES_CARD.bxml:1:2:1:4:1:2:1:1:1:1:1:2:2:1:1:2:1"/>
+                                            </Unary_Exp>
+                                        </Exp_Comparison>
+                                        <Exp_Comparison op="=">
+                                            <Binary_Exp op="mod" typref="1">
+                                                <Id value="xx" typref="1" tag="C:\Users\Joab\Desktop\rackathom\bdp\ACCES_CARD.bxml:1:2:1:4:1:2:1:1:1:1:1:2:2:1:2:1:1"/>
+                                                <Integer_Literal value="2" typref="1" tag="C:\Users\Joab\Desktop\rackathom\bdp\ACCES_CARD.bxml:1:2:1:4:1:2:1:1:1:1:1:2:2:1:2:1:2"/>
+                                            </Binary_Exp>
+                                            <Integer_Literal value="0" typref="1" tag="C:\Users\Joab\Desktop\rackathom\bdp\ACCES_CARD.bxml:1:2:1:4:1:2:1:1:1:1:1:2:2:1:2:2"/>
+                                        </Exp_Comparison>
+                                        <Exp_Comparison op="&lt;i">
+                                            <Binary_Exp op="*i" typref="1">
+                                                <Binary_Exp op="(" typref="1">
+                                                    <Id value="tab" typref="2" tag="C:\Users\Joab\Desktop\rackathom\bdp\ACCES_CARD.bxml:1:2:1:4:1:2:1:1:1:1:1:2:2:1:3:1:1:1"/>
+                                                    <Id value="xx" typref="1" tag="C:\Users\Joab\Desktop\rackathom\bdp\ACCES_CARD.bxml:1:2:1:4:1:2:1:1:1:1:1:2:2:1:3:1:1:2"/>
+                                                </Binary_Exp>
+                                                <Integer_Literal value="2" typref="1" tag="C:\Users\Joab\Desktop\rackathom\bdp\ACCES_CARD.bxml:1:2:1:4:1:2:1:1:1:1:1:2:2:1:3:1:2"/>
+                                            </Binary_Exp>
+                                            <Integer_Literal value="9" typref="1" tag="C:\Users\Joab\Desktop\rackathom\bdp\ACCES_CARD.bxml:1:2:1:4:1:2:1:1:1:1:1:2:2:1:3:2"/>
+                                        </Exp_Comparison>
+                                    </Nary_Pred>
+                                </Pred>
+                                <Body>
+                                    <Binary_Exp op="*i" typref="1">
+                                        <Binary_Exp op="(" typref="1">
+                                            <Id value="tab" typref="2" tag="C:\Users\Joab\Desktop\rackathom\bdp\ACCES_CARD.bxml:1:2:1:4:1:2:1:1:1:1:1:2:3:1:1:1"/>
+                                            <Id value="xx" typref="1" tag="C:\Users\Joab\Desktop\rackathom\bdp\ACCES_CARD.bxml:1:2:1:4:1:2:1:1:1:1:1:2:3:1:1:2"/>
+                                        </Binary_Exp>
+                                        <Integer_Literal value="2" typref="1" tag="C:\Users\Joab\Desktop\rackathom\bdp\ACCES_CARD.bxml:1:2:1:4:1:2:1:1:1:1:1:2:3:1:2"/>
+                                    </Binary_Exp>
+                                </Body>
+                            </Quantified_Exp>
+                        </Binary_Exp>
+                        <Quantified_Exp type="iSIGMA" typref="1">
+                            <Variables>
+                                <Id value="xx" typref="1"/>
+                            </Variables>
+                            <Pred>
+                                <Nary_Pred op="&amp;">
+                                    <Exp_Comparison op=":">
+                                        <Id value="xx" typref="1" tag="C:\Users\Joab\Desktop\rackathom\bdp\ACCES_CARD.bxml:1:2:1:4:1:2:1:1:1:1:2:2:1:1:1"/>
+                                        <Unary_Exp op="dom" typref="0">
+                                            <Id value="tab" typref="2" tag="C:\Users\Joab\Desktop\rackathom\bdp\ACCES_CARD.bxml:1:2:1:4:1:2:1:1:1:1:2:2:1:1:2:1"/>
+                                        </Unary_Exp>
+                                    </Exp_Comparison>
+                                    <Exp_Comparison op="=">
+                                        <Binary_Exp op="mod" typref="1">
+                                            <Id value="xx" typref="1" tag="C:\Users\Joab\Desktop\rackathom\bdp\ACCES_CARD.bxml:1:2:1:4:1:2:1:1:1:1:2:2:1:2:1:1"/>
+                                            <Integer_Literal value="2" typref="1" tag="C:\Users\Joab\Desktop\rackathom\bdp\ACCES_CARD.bxml:1:2:1:4:1:2:1:1:1:1:2:2:1:2:1:2"/>
+                                        </Binary_Exp>
+                                        <Integer_Literal value="0" typref="1" tag="C:\Users\Joab\Desktop\rackathom\bdp\ACCES_CARD.bxml:1:2:1:4:1:2:1:1:1:1:2:2:1:2:2"/>
+                                    </Exp_Comparison>
+                                    <Exp_Comparison op="&gt;i">
+                                        <Binary_Exp op="*i" typref="1">
+                                            <Binary_Exp op="(" typref="1">
+                                                <Id value="tab" typref="2" tag="C:\Users\Joab\Desktop\rackathom\bdp\ACCES_CARD.bxml:1:2:1:4:1:2:1:1:1:1:2:2:1:3:1:1:1"/>
+                                                <Id value="xx" typref="1" tag="C:\Users\Joab\Desktop\rackathom\bdp\ACCES_CARD.bxml:1:2:1:4:1:2:1:1:1:1:2:2:1:3:1:1:2"/>
+                                            </Binary_Exp>
+                                            <Integer_Literal value="2" typref="1" tag="C:\Users\Joab\Desktop\rackathom\bdp\ACCES_CARD.bxml:1:2:1:4:1:2:1:1:1:1:2:2:1:3:1:2"/>
+                                        </Binary_Exp>
+                                        <Integer_Literal value="9" typref="1" tag="C:\Users\Joab\Desktop\rackathom\bdp\ACCES_CARD.bxml:1:2:1:4:1:2:1:1:1:1:2:2:1:3:2"/>
+                                    </Exp_Comparison>
+                                </Nary_Pred>
+                            </Pred>
+                            <Body>
+                                <Binary_Exp op="+i" typref="1">
+                                    <Binary_Exp op="/i" typref="1">
+                                        <Binary_Exp op="*i" typref="1">
+                                            <Binary_Exp op="(" typref="1">
+                                                <Id value="tab" typref="2" tag="C:\Users\Joab\Desktop\rackathom\bdp\ACCES_CARD.bxml:1:2:1:4:1:2:1:1:1:1:2:3:1:1:1:1:1"/>
+                                                <Id value="xx" typref="1" tag="C:\Users\Joab\Desktop\rackathom\bdp\ACCES_CARD.bxml:1:2:1:4:1:2:1:1:1:1:2:3:1:1:1:1:2"/>
+                                            </Binary_Exp>
+                                            <Integer_Literal value="2" typref="1" tag="C:\Users\Joab\Desktop\rackathom\bdp\ACCES_CARD.bxml:1:2:1:4:1:2:1:1:1:1:2:3:1:1:1:2"/>
+                                        </Binary_Exp>
+                                        <Integer_Literal value="10" typref="1" tag="C:\Users\Joab\Desktop\rackathom\bdp\ACCES_CARD.bxml:1:2:1:4:1:2:1:1:1:1:2:3:1:1:2"/>
+                                    </Binary_Exp>
+                                    <Binary_Exp op="mod" typref="1">
+                                        <Binary_Exp op="*i" typref="1">
+                                            <Binary_Exp op="(" typref="1">
+                                                <Id value="tab" typref="2" tag="C:\Users\Joab\Desktop\rackathom\bdp\ACCES_CARD.bxml:1:2:1:4:1:2:1:1:1:1:2:3:1:2:1:1:1"/>
+                                                <Id value="xx" typref="1" tag="C:\Users\Joab\Desktop\rackathom\bdp\ACCES_CARD.bxml:1:2:1:4:1:2:1:1:1:1:2:3:1:2:1:1:2"/>
+                                            </Binary_Exp>
+                                            <Integer_Literal value="2" typref="1" tag="C:\Users\Joab\Desktop\rackathom\bdp\ACCES_CARD.bxml:1:2:1:4:1:2:1:1:1:1:2:3:1:2:1:2"/>
+                                        </Binary_Exp>
+                                        <Integer_Literal value="10" typref="1" tag="C:\Users\Joab\Desktop\rackathom\bdp\ACCES_CARD.bxml:1:2:1:4:1:2:1:1:1:1:2:3:1:2:2"/>
+                                    </Binary_Exp>
+                                </Binary_Exp>
+                            </Body>
+                        </Quantified_Exp>
+                    </Binary_Exp>
+                </Exp_Comparison>
+            </Goal>
+        </Simple_Goal>
+        <Simple_Goal>
+            <Tag>Operation is well defined</Tag>
+            <Goal>
+                <Exp_Comparison op="&lt;=i">
+                    <Integer_Literal value="1" typref="1"/>
+                    <Integer_Literal value="10" typref="1" tag="C:\Users\Joab\Desktop\rackathom\bdp\ACCES_CARD.bxml:1:2:1:4:1:2:1:1:1:2"/>
+                </Exp_Comparison>
+            </Goal>
+        </Simple_Goal>
+    </Proof_Obligation>
+    <TypeInfos>
+        <Type id="0">
+            <Unary_Exp op="POW">
+                <Id value="INTEGER"/>
+            </Unary_Exp>
+        </Type>
+        <Type id="1">
+            <Id value="INTEGER"/>
+        </Type>
+        <Type id="2">
+            <Unary_Exp op="POW">
+                <Binary_Exp op="*">
+                    <Id value="INTEGER"/>
+                    <Id value="INTEGER"/>
+                </Binary_Exp>
+            </Unary_Exp>
+        </Type>
+        <Type id="3">
+            <Unary_Exp op="POW">
+                <Unary_Exp op="POW">
+                    <Binary_Exp op="*">
+                        <Id value="INTEGER"/>
+                        <Id value="INTEGER"/>
+                    </Binary_Exp>
+                </Unary_Exp>
+            </Unary_Exp>
+        </Type>
+        <Type id="4">
+            <Unary_Exp op="POW">
+                <Unary_Exp op="POW">
+                    <Id value="INTEGER"/>
+                </Unary_Exp>
+            </Unary_Exp>
+        </Type>
+    </TypeInfos>
+</Proof_Obligations>

@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Machine xmlns='https://www.atelierb.eu/Formats/bxml' version='1.0' name='CTX' type='abstraction' position='true' semantic='true' b0check='false'>
+<Sets>
+<Attr>
+<Pos l='4' c='1' s='4'/>
+</Attr>
+<Set>
+<Id value='PRESSURES' typref='4'>
+<Attr>
+<Pos l='5' c='5' s='9'/>
+</Attr>
+</Id>
+<Enumerated_Values>
+<Id value='PRESSURE_A' typref='5'>
+<Attr>
+<Pos l='6' c='9' s='10'/>
+</Attr>
+</Id>
+<Id value='PRESSURE_B' typref='5'>
+<Attr>
+<Pos l='7' c='9' s='10'/>
+</Attr>
+</Id>
+<Id value='PRESSURE_OTHER' typref='5'>
+<Attr>
+<Pos l='8' c='9' s='14'/>
+</Attr>
+</Id>
+</Enumerated_Values>
+</Set>
+</Sets>
+<Initialisation>
+<Skip/>
+</Initialisation>
+<TypeInfos>
+<Type id='0'>
+<Id value='BOOL'/>
+</Type>
+<Type id='1'>
+<Id value='INTEGER'/>
+</Type>
+<Type id='2'>
+<Unary_Exp op='POW'>
+<Id value='INTEGER'/>
+</Unary_Exp>
+</Type>
+<Type id='3'>
+<Unary_Exp op='POW'>
+<Unary_Exp op='POW'>
+<Id value='INTEGER'/>
+</Unary_Exp>
+</Unary_Exp>
+</Type>
+<Type id='4'>
+<Unary_Exp op='POW'>
+<Id value='PRESSURES'/>
+</Unary_Exp>
+</Type>
+<Type id='5'>
+<Id value='PRESSURES'/>
+</Type>
+</TypeInfos>
+
+</Machine>

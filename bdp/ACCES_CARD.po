@@ -1,0 +1,38 @@
+THEORY ProofList IS
+_f(1) & _f(2) & WellDefinedness_is_valid.13,(_f(8) => _f(16));
+_f(1) & _f(2) & WellDefinedness_is_valid.12,(_f(8) => _f(17));
+_f(1) & _f(2) & WellDefinedness_is_valid.11,(_f(3) & _f(5) & _f(7) & _f(8) => _f(16));
+_f(1) & _f(2) & WellDefinedness_is_valid.10,(_f(3) & _f(5) & _f(7) & _f(8) => _f(15));
+_f(1) & _f(2) & WellDefinedness_is_valid.9,(_f(3) & _f(5) & _f(7) & _f(8) => _f(12));
+_f(1) & _f(2) & WellDefinedness_is_valid.8,(_f(8) => _f(14));
+_f(1) & _f(2) & WellDefinedness_is_valid.7,(_f(3) & _f(5) & _f(6) & _f(8) => _f(12));
+_f(1) & _f(2) & WellDefinedness_is_valid.6,(_f(3) & _f(5) & _f(8) => _f(12));
+_f(1) & _f(2) & WellDefinedness_is_valid.5,(_f(8) => _f(13));
+_f(1) & _f(2) & WellDefinedness_is_valid.4,(_f(3) & _f(4) & _f(8) => _f(12));
+_f(1) & _f(2) & WellDefinedness_is_valid.3,(_f(3) & _f(8) => _f(11));
+_f(1) & _f(2) & WellDefinedness_is_valid.2,(_f(3) & _f(8) => _f(10));
+_f(1) & _f(2) & WellDefinedness_is_valid.1,(_f(8) => _f(9))
+END
+&
+THEORY Formulas IS
+((NAT) = (((0) .. (2147483647)))) & ((INT) = (((-2147483647) .. (2147483647))));
+tab : ((0) .. (15)) +-> ((0) .. (9)) & dom(tab) = ((0) .. (15)) & ((tab) : (((((0) .. (15))) --> (((0) .. (9))))));
+((xx) : (dom(tab)));
+not(((((xx) mod (2))) = (0)));
+((((xx) mod (2))) = (0));
+(((tab )(xx) * 2) +1 <= 9);
+(9 +1 <= ((tab )(xx) * 2));
+"Operation is well defined";
+((SET(xx).(((xx) : (dom(tab))) & not(((((xx) mod (2))) = (0))))) : (FIN(SET(xx).(((xx) : (dom(tab))) & not(((((xx) mod (2))) = (0)))))));
+(0 <= xx);
+(1 <= 2);
+((tab) : (((dom(tab)) +-> (ran(tab)))));
+((SET(xx).(((xx) : (dom(tab))) & ((((xx) mod (2))) = (0)) & (((tab )(xx) * 2) +1 <= 9))) : (FIN(SET(xx).(((xx) : (dom(tab))) & ((((xx) mod (2))) = (0)) & (((tab )(xx) * 2) +1 <= 9)))));
+((SET(xx).(((xx) : (dom(tab))) & ((((xx) mod (2))) = (0)) & (9 +1 <= ((tab )(xx) * 2)))) : (FIN(SET(xx).(((xx) : (dom(tab))) & ((((xx) mod (2))) = (0)) & (9 +1 <= ((tab )(xx) * 2))))));
+(0 <= ((tab )(xx) * 2));
+(1 <= 10);
+(0 <= ((SIGMA(xx).(((xx) : (dom(tab))) & not(((((xx) mod (2))) = (0))) | (tab )(xx)) + SIGMA(xx).(((xx) : (dom(tab))) & ((((xx) mod (2))) = (0)) & (((tab )(xx) * 2) +1 <= 9) | ((tab )(xx) * 2))) + SIGMA(xx).(((xx) : (dom(tab))) & ((((xx) mod (2))) = (0)) & (9 +1 <= ((tab )(xx) * 2)) | ((((tab )(xx) * 2) / 10) + ((((tab )(xx) * 2)) mod (10))))))
+END
+&
+THEORY EnumerateX
+END

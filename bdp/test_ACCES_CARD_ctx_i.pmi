@@ -1,0 +1,27 @@
+THEORY BalanceX IS
+test_ACCES_CARD_ctx_i,3,0,0,0,0,0,0;
+Initialisation,3,0,0,0,0,0,0
+END
+&
+THEORY ProofState IS
+Unproved;
+Unproved;
+Unproved
+END
+&
+THEORY MethodList IS
+?;
+?;
+?
+END
+&
+THEORY PassList IS
+Force(0),(?; 0; 1; 2; 3);
+Force(0),(?; 0; 1; 2; 3);
+Force(0),(?; 0; 1; 2; 3)
+END
+&
+THEORY Status IS
+test_ACCES_CARD_ctx_i,3,0,0,0,0,0;
+Initialisation,3,0,0,0,0,0
+END
