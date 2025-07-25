@@ -1,7 +1,56 @@
-THEORY ProofList
+THEORY ProofList IS
+_f(1) & _f(2) & _f(3) & _f(20) & Operation_test_control.6,(_f(4) & _f(5) & _f(6) & _f(21) & _f(22) & _f(23) & _f(7) & _f(8) & _f(9) & _f(10) & _f(11) & _f(12) & _f(24) & _f(25) & _f(26) & _f(27) & _f(28) & _f(29) & _f(30) & _f(31) & _f(34) & _f(37) & _f(17) => _f(40));
+_f(1) & _f(2) & _f(3) & _f(20) & Operation_test_control.5,(_f(4) & _f(5) & _f(6) & _f(21) & _f(22) & _f(23) & _f(7) & _f(8) & _f(9) & _f(10) & _f(11) & _f(12) & _f(24) & _f(25) & _f(26) & _f(27) & _f(28) & _f(29) & _f(30) & _f(31) & _f(34) & _f(37) & _f(17) => _f(38));
+_f(1) & _f(2) & _f(3) & _f(20) & Operation_test_control.4,(_f(4) & _f(5) & _f(6) & _f(21) & _f(22) & _f(23) & _f(7) & _f(8) & _f(9) & _f(10) & _f(11) & _f(12) & _f(24) & _f(25) & _f(26) & _f(27) & _f(28) & _f(29) & _f(30) & _f(31) & _f(34) & _f(35) & _f(36) & _f(17) => _f(41));
+_f(1) & _f(2) & _f(3) & _f(20) & Operation_test_control.3,(_f(4) & _f(5) & _f(6) & _f(21) & _f(22) & _f(23) & _f(7) & _f(8) & _f(9) & _f(10) & _f(11) & _f(12) & _f(24) & _f(25) & _f(26) & _f(27) & _f(28) & _f(29) & _f(30) & _f(31) & _f(34) & _f(35) & _f(36) & _f(17) => _f(40));
+_f(1) & _f(2) & _f(3) & _f(20) & Operation_test_control.2,(_f(4) & _f(5) & _f(6) & _f(21) & _f(22) & _f(23) & _f(7) & _f(8) & _f(9) & _f(10) & _f(11) & _f(12) & _f(24) & _f(25) & _f(26) & _f(27) & _f(28) & _f(29) & _f(30) & _f(31) & _f(32) & _f(33) & _f(17) => _f(39));
+_f(1) & _f(2) & _f(3) & _f(20) & Operation_test_control.1,(_f(4) & _f(5) & _f(6) & _f(21) & _f(22) & _f(23) & _f(7) & _f(8) & _f(9) & _f(10) & _f(11) & _f(12) & _f(24) & _f(25) & _f(26) & _f(27) & _f(28) & _f(29) & _f(30) & _f(31) & _f(32) & _f(33) & _f(17) => _f(38));
+_f(1) & _f(2) & _f(3) & Initialisation.2,(_f(4) & _f(5) & _f(6) & _f(7) & _f(8) & _f(9) & _f(10) & _f(11) & _f(12) & _f(13) & _f(14) & _f(15) & _f(16) & _f(17) => _f(19));
+_f(1) & _f(2) & _f(3) & Initialisation.1,(_f(4) & _f(5) & _f(6) & _f(7) & _f(8) & _f(9) & _f(10) & _f(11) & _f(12) & _f(13) & _f(14) & _f(15) & _f(16) & _f(17) => _f(18))
 END
 &
-THEORY Formulas
+THEORY Formulas IS
+((NAT) = (((0) .. (2147483647)))) & ((INT) = (((-2147483647) .. (2147483647))));
+((1..3)*{PRESSURES}): FIN(NATURAL*{PRESSURES})& not(((1..3)*{PRESSURES}) = {}) & ((1..3)*{OBJECTIVES}): FIN(NATURAL*{OBJECTIVES})& not(((1..3)*{OBJECTIVES}) = {}) & ((1..7)*{ACTIONS}): FIN(NATURAL*{ACTIONS})& not(((1..7)*{ACTIONS}) = {}) & ((1..4)*{AUTHENTICATED}): FIN(NATURAL*{AUTHENTICATED})& not(((1..4)*{AUTHENTICATED}) = {});
+((pressure_sensor_l$1) : (((1..3)*{PRESSURES}))) & ((contact_sensor_a$1) : (BOOL)) & ((contact_sensor_b$1) : (BOOL)) & ((card_reader_a$1) : (BOOL)) & ((card_reader_l$1) : (BOOL)) & ((card_reader_b$1) : (BOOL)) & ((button_room_a_open_a$1) : (BOOL)) & ((button_room_l_open_a$1) : (BOOL)) & ((button_room_l_open_b$1) : (BOOL)) & ((button_room_b_open_b$1) : (BOOL)) & ((enable_door_a$1) : (BOOL)) & ((enable_door_b$1) : (BOOL)) & ((((enable_door_a$1) = (TRUE))) => (((enable_door_b$1) = (FALSE)))) & ((((enable_door_b$1) = (TRUE))) => (((enable_door_a$1) = (FALSE)))) & ((current_action$1) : (((1..7)*{ACTIONS}))) & ((current_authentication$1) : (((1..4)*{AUTHENTICATED}))) & ((current_objective$1) : (((1..3)*{OBJECTIVES})));
+((pressure_sensor_l) : (((1..3)*{PRESSURES})));
+((contact_sensor_a) : (BOOL));
+((contact_sensor_b) : (BOOL));
+((card_reader_l) : (BOOL));
+((card_reader_b) : (BOOL));
+((button_room_a_open_a) : (BOOL));
+((button_room_l_open_a) : (BOOL));
+((button_room_l_open_b) : (BOOL));
+((button_room_b_open_b) : (BOOL));
+((FALSE) : (BOOL));
+(((1|->ACTIONS)) : (((1..7)*{ACTIONS})));
+(((4|->AUTHENTICATED)) : (((1..4)*{AUTHENTICATED})));
+(((3|->OBJECTIVES)) : (((1..3)*{OBJECTIVES})));
+"Refinement is correct";
+not((((1|->ACTIONS)) = ((2|->ACTIONS))));
+not((((1|->ACTIONS)) = ((3|->ACTIONS))));
+((((current_action$1) = ((2|->ACTIONS)))) => (((enable_door_a$1) = (TRUE)))) & ((((current_action$1) = ((3|->ACTIONS)))) => (((enable_door_b$1) = (TRUE)))) & ((((current_action$1) = ((6|->ACTIONS)))) => (((enable_door_a$1) = (FALSE)))) & ((((current_action$1) = ((7|->ACTIONS)))) => (((enable_door_b$1) = (FALSE))));
+((not(((pressure_sensor_l) = ((1|->PRESSURES))))) => (((contact_sensor_a) = (TRUE))));
+((not(((pressure_sensor_l) = ((2|->PRESSURES))))) => (((contact_sensor_b) = (TRUE))));
+((card_reader_a) : (BOOL));
+((current_authentication) : (((1..4)*{AUTHENTICATED})));
+((not(((current_authentication) = ((4|->AUTHENTICATED))))) => (((current_authentication$1) : (({(4|->AUTHENTICATED)}\/{current_authentication})))));
+((current_action) : (((1..7)*{ACTIONS})));
+((current_objective) : (((1..3)*{OBJECTIVES})));
+((((current_action) = ((2|->ACTIONS)))) => (((pressure_sensor_l) = ((1|->PRESSURES))) & ((contact_sensor_b) = (TRUE))));
+((((current_action) = ((3|->ACTIONS)))) => (((pressure_sensor_l) = ((2|->PRESSURES))) & ((contact_sensor_a) = (TRUE))));
+((((current_action) = ((6|->ACTIONS)))) => (((contact_sensor_a) = (TRUE)) & ((contact_sensor_b) = (TRUE)) & not(((pressure_sensor_l) = ((1|->PRESSURES))))));
+((((current_action) = ((7|->ACTIONS)))) => (((contact_sensor_a) = (TRUE)) & ((contact_sensor_b) = (TRUE)) & not(((pressure_sensor_l) = ((2|->PRESSURES))))));
+((pressure_sensor_l) = ((2|->PRESSURES)));
+((contact_sensor_a) = (TRUE));
+not(((pressure_sensor_l) = ((2|->PRESSURES))) & ((contact_sensor_a) = (TRUE)));
+((pressure_sensor_l) = ((1|->PRESSURES)));
+((contact_sensor_b) = (TRUE));
+not(((pressure_sensor_l) = ((1|->PRESSURES))) & ((contact_sensor_b) = (TRUE)));
+not(((current_action) = ((2|->ACTIONS))));
+not(((current_action) = ((7|->ACTIONS))));
+not(((current_action) = ((3|->ACTIONS))));
+not(((current_action) = ((6|->ACTIONS))))
 END
 &
 THEORY EnumerateX IS

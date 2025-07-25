@@ -11,6 +11,9 @@
         <component_file path="C:/Users/Joab/Desktop/rackathom" name="CONTROLLER" suffix="mch" user="Joab">
             <component name="CONTROLLER" type="specification" />
         </component_file>
+        <component_file path="C:/Users/Joab/Desktop/rackathom" name="CONTROLLER_i" suffix="imp" user="Joab">
+            <component name="CONTROLLER_i" type="implementation" />
+        </component_file>
         <component_file path="C:/Users/Joab/Desktop/rackathom" name="CTX" suffix="mch" user="Joab">
             <component name="CTX" type="specification" />
         </component_file>

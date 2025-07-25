@@ -30,60 +30,207 @@
 <Name>CONTROLLER</Name>
 </Referenced_Machine>
 </Imports>
+<Invariant>
+<Attr>
+<Pos l='6' c='1' s='9'/>
+</Attr>
+<Nary_Pred op='&amp;'>
+<Binary_Pred op='=&gt;'>
+<Attr>
+<Pos l='8' c='46' s='2'/>
+</Attr>
+<Exp_Comparison op='='>
+<Attr>
+<Pos l='8' c='22' s='1'/>
+</Attr>
+<Id value='current_action' typref='4'>
+<Attr>
+<Pos l='8' c='7' s='14'/>
+</Attr>
+</Id>
+<Id value='TRANSLATE_OPEN_DOOR_A' typref='4'>
+<Attr>
+<Pos l='8' c='24' s='21'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op='='>
+<Attr>
+<Pos l='8' c='63' s='1'/>
+</Attr>
+<Id value='enable_door_a' typref='0'>
+<Attr>
+<Pos l='8' c='49' s='13'/>
+</Attr>
+</Id>
+<Boolean_Literal value='TRUE' typref='0'>
+<Attr>
+<Pos l='8' c='65' s='4'/>
+</Attr>
+</Boolean_Literal>
+</Exp_Comparison>
+</Binary_Pred>
+<Binary_Pred op='=&gt;'>
+<Attr>
+<Pos l='9' c='46' s='2'/>
+</Attr>
+<Exp_Comparison op='='>
+<Attr>
+<Pos l='9' c='22' s='1'/>
+</Attr>
+<Id value='current_action' typref='4'>
+<Attr>
+<Pos l='9' c='7' s='14'/>
+</Attr>
+</Id>
+<Id value='TRANSLATE_OPEN_DOOR_B' typref='4'>
+<Attr>
+<Pos l='9' c='24' s='21'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op='='>
+<Attr>
+<Pos l='9' c='63' s='1'/>
+</Attr>
+<Id value='enable_door_b' typref='0'>
+<Attr>
+<Pos l='9' c='49' s='13'/>
+</Attr>
+</Id>
+<Boolean_Literal value='TRUE' typref='0'>
+<Attr>
+<Pos l='9' c='65' s='4'/>
+</Attr>
+</Boolean_Literal>
+</Exp_Comparison>
+</Binary_Pred>
+<Binary_Pred op='=&gt;'>
+<Attr>
+<Pos l='13' c='46' s='2'/>
+</Attr>
+<Exp_Comparison op='='>
+<Attr>
+<Pos l='13' c='22' s='1'/>
+</Attr>
+<Id value='current_action' typref='4'>
+<Attr>
+<Pos l='13' c='7' s='14'/>
+</Attr>
+</Id>
+<Id value='ADAPT_PRESSURE_L_TO_A' typref='4'>
+<Attr>
+<Pos l='13' c='24' s='21'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op='='>
+<Attr>
+<Pos l='13' c='63' s='1'/>
+</Attr>
+<Id value='enable_door_a' typref='0'>
+<Attr>
+<Pos l='13' c='49' s='13'/>
+</Attr>
+</Id>
+<Boolean_Literal value='FALSE' typref='0'>
+<Attr>
+<Pos l='13' c='65' s='5'/>
+</Attr>
+</Boolean_Literal>
+</Exp_Comparison>
+</Binary_Pred>
+<Binary_Pred op='=&gt;'>
+<Attr>
+<Pos l='14' c='46' s='2'/>
+</Attr>
+<Exp_Comparison op='='>
+<Attr>
+<Pos l='14' c='22' s='1'/>
+</Attr>
+<Id value='current_action' typref='4'>
+<Attr>
+<Pos l='14' c='7' s='14'/>
+</Attr>
+</Id>
+<Id value='ADAPT_PRESSURE_L_TO_B' typref='4'>
+<Attr>
+<Pos l='14' c='24' s='21'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op='='>
+<Attr>
+<Pos l='14' c='63' s='1'/>
+</Attr>
+<Id value='enable_door_b' typref='0'>
+<Attr>
+<Pos l='14' c='49' s='13'/>
+</Attr>
+</Id>
+<Boolean_Literal value='FALSE' typref='0'>
+<Attr>
+<Pos l='14' c='65' s='5'/>
+</Attr>
+</Boolean_Literal>
+</Exp_Comparison>
+</Binary_Pred>
+</Nary_Pred>
+</Invariant>
 <Initialisation>
 <Skip/>
 </Initialisation>
 <Operations>
 <Operation name='test_control'>
 <Attr>
-<Pos l='6' c='5' s='12' endLine='12'/>
+<Pos l='17' c='5' s='12' endLine='23'/>
 </Attr>
 <Body>
 <Nary_Sub op=';'>
 <Operation_Call>
 <Attr>
-<Pos l='8' c='9' s='21'/>
+<Pos l='19' c='9' s='21'/>
 </Attr>
 <Name>
 <Id value='update_sensors_states'>
 <Attr>
-<Pos l='8' c='9' s='21'/>
+<Pos l='19' c='9' s='21'/>
 </Attr>
 </Id>
 </Name>
 </Operation_Call>
 <Operation_Call>
 <Attr>
-<Pos l='9' c='9' s='15'/>
+<Pos l='20' c='9' s='15'/>
 </Attr>
 <Name>
 <Id value='process_readers'>
 <Attr>
-<Pos l='9' c='9' s='15'/>
+<Pos l='20' c='9' s='15'/>
 </Attr>
 </Id>
 </Name>
 </Operation_Call>
 <Operation_Call>
 <Attr>
-<Pos l='10' c='9' s='7'/>
+<Pos l='21' c='9' s='7'/>
 </Attr>
 <Name>
 <Id value='control'>
 <Attr>
-<Pos l='10' c='9' s='7'/>
+<Pos l='21' c='9' s='7'/>
 </Attr>
 </Id>
 </Name>
 </Operation_Call>
 <Operation_Call>
 <Attr>
-<Pos l='11' c='9' s='16'/>
+<Pos l='22' c='9' s='16'/>
 </Attr>
 <Name>
 <Id value='compute_enabling'>
 <Attr>
-<Pos l='11' c='9' s='16'/>
+<Pos l='22' c='9' s='16'/>
 </Attr>
 </Id>
 </Name>
@@ -110,6 +257,9 @@
 <Id value='INTEGER'/>
 </Unary_Exp>
 </Unary_Exp>
+</Type>
+<Type id='4'>
+<Id value='ACTIONS'/>
 </Type>
 </TypeInfos>
 

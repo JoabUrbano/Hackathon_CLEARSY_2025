@@ -250,7 +250,7 @@
 </Operation>
 <Operation name='control'>
 <Attr>
-<Pos l='27' c='5' s='7' endLine='107'/>
+<Pos l='27' c='5' s='7' endLine='47'/>
 </Attr>
 <Body>
 <Becomes_Such_That>
@@ -338,180 +338,68 @@
 </Exp_Comparison>
 <Exp_Comparison op='='>
 <Attr>
-<Pos l='36' c='42' s='1'/>
+<Pos l='35' c='67' s='1'/>
 </Attr>
 <Id value='contact_sensor_b' typref='0'>
 <Attr>
-<Pos l='36' c='25' s='16'/>
+<Pos l='35' c='50' s='16'/>
 </Attr>
 </Id>
 <Boolean_Literal value='TRUE' typref='0'>
 <Attr>
-<Pos l='36' c='44' s='4'/>
+<Pos l='35' c='69' s='4'/>
 </Attr>
 </Boolean_Literal>
-</Exp_Comparison>
-<Exp_Comparison op='='>
-<Attr>
-<Pos l='37' c='42' s='1'/>
-</Attr>
-<Id value='contact_sensor_a' typref='0'>
-<Attr>
-<Pos l='37' c='25' s='16'/>
-</Attr>
-</Id>
-<Boolean_Literal value='TRUE' typref='0'>
-<Attr>
-<Pos l='37' c='44' s='4'/>
-</Attr>
-</Boolean_Literal>
-</Exp_Comparison>
-<Exp_Comparison op='='>
-<Attr>
-<Pos l='38' c='43' s='1'/>
-</Attr>
-<Id value='current_objective' typref='6'>
-<Attr>
-<Pos l='38' c='25' s='17'/>
-</Attr>
-</Id>
-<Id value='OBJ_OPEN_DOOR_A' typref='6'>
-<Attr>
-<Pos l='38' c='45' s='15'/>
-</Attr>
-</Id>
 </Exp_Comparison>
 </Nary_Pred>
 </Binary_Pred>
 <Binary_Pred op='=&gt;'>
 <Attr>
-<Pos l='41' c='57' s='2'/>
+<Pos l='37' c='53' s='2'/>
 </Attr>
 <Exp_Comparison op='='>
 <Attr>
-<Pos l='41' c='33' s='1'/>
+<Pos l='37' c='29' s='1'/>
 </Attr>
 <Id value='current_action' typref='4'>
 <Attr>
-<Pos l='41' c='18' s='14'/>
+<Pos l='37' c='14' s='14'/>
 </Attr>
 </Id>
 <Id value='TRANSLATE_OPEN_DOOR_B' typref='4'>
 <Attr>
-<Pos l='41' c='35' s='21'/>
+<Pos l='37' c='31' s='21'/>
 </Attr>
 </Id>
 </Exp_Comparison>
 <Nary_Pred op='&amp;'>
 <Exp_Comparison op='='>
 <Attr>
-<Pos l='42' c='35' s='1'/>
+<Pos l='38' c='35' s='1'/>
 </Attr>
 <Id value='pressure_sensor_l' typref='10'>
 <Attr>
-<Pos l='42' c='17' s='17'/>
+<Pos l='38' c='17' s='17'/>
 </Attr>
 </Id>
 <Id value='PRESSURE_B' typref='10'>
 <Attr>
-<Pos l='42' c='37' s='10'/>
+<Pos l='38' c='37' s='10'/>
 </Attr>
 </Id>
 </Exp_Comparison>
 <Exp_Comparison op='='>
 <Attr>
-<Pos l='43' c='42' s='1'/>
+<Pos l='38' c='67' s='1'/>
 </Attr>
 <Id value='contact_sensor_a' typref='0'>
 <Attr>
-<Pos l='43' c='25' s='16'/>
+<Pos l='38' c='50' s='16'/>
 </Attr>
 </Id>
 <Boolean_Literal value='TRUE' typref='0'>
 <Attr>
-<Pos l='43' c='44' s='4'/>
-</Attr>
-</Boolean_Literal>
-</Exp_Comparison>
-<Exp_Comparison op='='>
-<Attr>
-<Pos l='44' c='42' s='1'/>
-</Attr>
-<Id value='contact_sensor_b' typref='0'>
-<Attr>
-<Pos l='44' c='25' s='16'/>
-</Attr>
-</Id>
-<Boolean_Literal value='TRUE' typref='0'>
-<Attr>
-<Pos l='44' c='44' s='4'/>
-</Attr>
-</Boolean_Literal>
-</Exp_Comparison>
-<Exp_Comparison op='='>
-<Attr>
-<Pos l='45' c='43' s='1'/>
-</Attr>
-<Id value='current_objective' typref='6'>
-<Attr>
-<Pos l='45' c='25' s='17'/>
-</Attr>
-</Id>
-<Id value='OBJ_OPEN_DOOR_B' typref='6'>
-<Attr>
-<Pos l='45' c='45' s='15'/>
-</Attr>
-</Id>
-</Exp_Comparison>
-</Nary_Pred>
-</Binary_Pred>
-<Binary_Pred op='=&gt;'>
-<Attr>
-<Pos l='48' c='58' s='2'/>
-</Attr>
-<Exp_Comparison op='='>
-<Attr>
-<Pos l='48' c='33' s='1'/>
-</Attr>
-<Id value='current_action' typref='4'>
-<Attr>
-<Pos l='48' c='18' s='14'/>
-</Attr>
-</Id>
-<Id value='TRANSLATE_CLOSE_DOOR_A' typref='4'>
-<Attr>
-<Pos l='48' c='35' s='22'/>
-</Attr>
-</Id>
-</Exp_Comparison>
-<Nary_Pred op='&amp;'>
-<Exp_Comparison op='='>
-<Attr>
-<Pos l='49' c='35' s='1'/>
-</Attr>
-<Id value='pressure_sensor_l' typref='10'>
-<Attr>
-<Pos l='49' c='17' s='17'/>
-</Attr>
-</Id>
-<Id value='PRESSURE_A' typref='10'>
-<Attr>
-<Pos l='49' c='37' s='10'/>
-</Attr>
-</Id>
-</Exp_Comparison>
-<Exp_Comparison op='='>
-<Attr>
-<Pos l='50' c='42' s='1'/>
-</Attr>
-<Id value='contact_sensor_a' typref='0'>
-<Attr>
-<Pos l='50' c='25' s='16'/>
-</Attr>
-</Id>
-<Boolean_Literal value='FALSE' typref='0'>
-<Attr>
-<Pos l='50' c='44' s='5'/>
+<Pos l='38' c='69' s='4'/>
 </Attr>
 </Boolean_Literal>
 </Exp_Comparison>
@@ -519,133 +407,66 @@
 </Binary_Pred>
 <Binary_Pred op='=&gt;'>
 <Attr>
-<Pos l='53' c='58' s='2'/>
+<Pos l='40' c='53' s='2'/>
 </Attr>
 <Exp_Comparison op='='>
 <Attr>
-<Pos l='53' c='33' s='1'/>
+<Pos l='40' c='29' s='1'/>
 </Attr>
 <Id value='current_action' typref='4'>
 <Attr>
-<Pos l='53' c='18' s='14'/>
-</Attr>
-</Id>
-<Id value='TRANSLATE_CLOSE_DOOR_B' typref='4'>
-<Attr>
-<Pos l='53' c='35' s='22'/>
-</Attr>
-</Id>
-</Exp_Comparison>
-<Nary_Pred op='&amp;'>
-<Exp_Comparison op='='>
-<Attr>
-<Pos l='54' c='35' s='1'/>
-</Attr>
-<Id value='pressure_sensor_l' typref='10'>
-<Attr>
-<Pos l='54' c='17' s='17'/>
-</Attr>
-</Id>
-<Id value='PRESSURE_B' typref='10'>
-<Attr>
-<Pos l='54' c='37' s='10'/>
-</Attr>
-</Id>
-</Exp_Comparison>
-<Exp_Comparison op='='>
-<Attr>
-<Pos l='55' c='42' s='1'/>
-</Attr>
-<Id value='contact_sensor_b' typref='0'>
-<Attr>
-<Pos l='55' c='25' s='16'/>
-</Attr>
-</Id>
-<Boolean_Literal value='FALSE' typref='0'>
-<Attr>
-<Pos l='55' c='44' s='5'/>
-</Attr>
-</Boolean_Literal>
-</Exp_Comparison>
-</Nary_Pred>
-</Binary_Pred>
-<Binary_Pred op='=&gt;'>
-<Attr>
-<Pos l='58' c='57' s='2'/>
-</Attr>
-<Exp_Comparison op='='>
-<Attr>
-<Pos l='58' c='33' s='1'/>
-</Attr>
-<Id value='current_action' typref='4'>
-<Attr>
-<Pos l='58' c='18' s='14'/>
+<Pos l='40' c='14' s='14'/>
 </Attr>
 </Id>
 <Id value='ADAPT_PRESSURE_L_TO_A' typref='4'>
 <Attr>
-<Pos l='58' c='35' s='21'/>
+<Pos l='40' c='31' s='21'/>
 </Attr>
 </Id>
 </Exp_Comparison>
 <Nary_Pred op='&amp;'>
+<Exp_Comparison op='='>
+<Attr>
+<Pos l='41' c='34' s='1'/>
+</Attr>
+<Id value='contact_sensor_a' typref='0'>
+<Attr>
+<Pos l='41' c='17' s='16'/>
+</Attr>
+</Id>
+<Boolean_Literal value='TRUE' typref='0'>
+<Attr>
+<Pos l='41' c='36' s='4'/>
+</Attr>
+</Boolean_Literal>
+</Exp_Comparison>
+<Exp_Comparison op='='>
+<Attr>
+<Pos l='41' c='60' s='1'/>
+</Attr>
+<Id value='contact_sensor_b' typref='0'>
+<Attr>
+<Pos l='41' c='43' s='16'/>
+</Attr>
+</Id>
+<Boolean_Literal value='TRUE' typref='0'>
+<Attr>
+<Pos l='41' c='62' s='4'/>
+</Attr>
+</Boolean_Literal>
+</Exp_Comparison>
 <Exp_Comparison op='/='>
 <Attr>
-<Pos l='59' c='43' s='2'/>
+<Pos l='41' c='87' s='2'/>
 </Attr>
 <Id value='pressure_sensor_l' typref='10'>
 <Attr>
-<Pos l='59' c='25' s='17'/>
+<Pos l='41' c='69' s='17'/>
 </Attr>
 </Id>
 <Id value='PRESSURE_A' typref='10'>
 <Attr>
-<Pos l='59' c='46' s='10'/>
-</Attr>
-</Id>
-</Exp_Comparison>
-<Exp_Comparison op='='>
-<Attr>
-<Pos l='60' c='42' s='1'/>
-</Attr>
-<Id value='contact_sensor_a' typref='0'>
-<Attr>
-<Pos l='60' c='25' s='16'/>
-</Attr>
-</Id>
-<Boolean_Literal value='TRUE' typref='0'>
-<Attr>
-<Pos l='60' c='44' s='4'/>
-</Attr>
-</Boolean_Literal>
-</Exp_Comparison>
-<Exp_Comparison op='='>
-<Attr>
-<Pos l='61' c='42' s='1'/>
-</Attr>
-<Id value='contact_sensor_b' typref='0'>
-<Attr>
-<Pos l='61' c='25' s='16'/>
-</Attr>
-</Id>
-<Boolean_Literal value='TRUE' typref='0'>
-<Attr>
-<Pos l='61' c='44' s='4'/>
-</Attr>
-</Boolean_Literal>
-</Exp_Comparison>
-<Exp_Comparison op='='>
-<Attr>
-<Pos l='62' c='43' s='1'/>
-</Attr>
-<Id value='current_objective' typref='6'>
-<Attr>
-<Pos l='62' c='25' s='17'/>
-</Attr>
-</Id>
-<Id value='OBJ_OPEN_DOOR_A' typref='6'>
-<Attr>
-<Pos l='62' c='45' s='15'/>
+<Pos l='41' c='90' s='10'/>
 </Attr>
 </Id>
 </Exp_Comparison>
@@ -653,402 +474,68 @@
 </Binary_Pred>
 <Binary_Pred op='=&gt;'>
 <Attr>
-<Pos l='65' c='57' s='2'/>
+<Pos l='43' c='53' s='2'/>
 </Attr>
 <Exp_Comparison op='='>
 <Attr>
-<Pos l='65' c='33' s='1'/>
+<Pos l='43' c='29' s='1'/>
 </Attr>
 <Id value='current_action' typref='4'>
 <Attr>
-<Pos l='65' c='18' s='14'/>
+<Pos l='43' c='14' s='14'/>
 </Attr>
 </Id>
 <Id value='ADAPT_PRESSURE_L_TO_B' typref='4'>
 <Attr>
-<Pos l='65' c='35' s='21'/>
+<Pos l='43' c='31' s='21'/>
 </Attr>
 </Id>
 </Exp_Comparison>
 <Nary_Pred op='&amp;'>
+<Exp_Comparison op='='>
+<Attr>
+<Pos l='44' c='34' s='1'/>
+</Attr>
+<Id value='contact_sensor_a' typref='0'>
+<Attr>
+<Pos l='44' c='17' s='16'/>
+</Attr>
+</Id>
+<Boolean_Literal value='TRUE' typref='0'>
+<Attr>
+<Pos l='44' c='36' s='4'/>
+</Attr>
+</Boolean_Literal>
+</Exp_Comparison>
+<Exp_Comparison op='='>
+<Attr>
+<Pos l='44' c='60' s='1'/>
+</Attr>
+<Id value='contact_sensor_b' typref='0'>
+<Attr>
+<Pos l='44' c='43' s='16'/>
+</Attr>
+</Id>
+<Boolean_Literal value='TRUE' typref='0'>
+<Attr>
+<Pos l='44' c='62' s='4'/>
+</Attr>
+</Boolean_Literal>
+</Exp_Comparison>
 <Exp_Comparison op='/='>
 <Attr>
-<Pos l='66' c='43' s='2'/>
+<Pos l='44' c='87' s='2'/>
 </Attr>
 <Id value='pressure_sensor_l' typref='10'>
 <Attr>
-<Pos l='66' c='25' s='17'/>
+<Pos l='44' c='69' s='17'/>
 </Attr>
 </Id>
 <Id value='PRESSURE_B' typref='10'>
 <Attr>
-<Pos l='66' c='46' s='10'/>
+<Pos l='44' c='90' s='10'/>
 </Attr>
 </Id>
-</Exp_Comparison>
-<Exp_Comparison op='='>
-<Attr>
-<Pos l='67' c='42' s='1'/>
-</Attr>
-<Id value='contact_sensor_a' typref='0'>
-<Attr>
-<Pos l='67' c='25' s='16'/>
-</Attr>
-</Id>
-<Boolean_Literal value='TRUE' typref='0'>
-<Attr>
-<Pos l='67' c='44' s='4'/>
-</Attr>
-</Boolean_Literal>
-</Exp_Comparison>
-<Exp_Comparison op='='>
-<Attr>
-<Pos l='68' c='42' s='1'/>
-</Attr>
-<Id value='contact_sensor_b' typref='0'>
-<Attr>
-<Pos l='68' c='25' s='16'/>
-</Attr>
-</Id>
-<Boolean_Literal value='TRUE' typref='0'>
-<Attr>
-<Pos l='68' c='44' s='4'/>
-</Attr>
-</Boolean_Literal>
-</Exp_Comparison>
-<Exp_Comparison op='='>
-<Attr>
-<Pos l='69' c='43' s='1'/>
-</Attr>
-<Id value='current_objective' typref='6'>
-<Attr>
-<Pos l='69' c='25' s='17'/>
-</Attr>
-</Id>
-<Id value='OBJ_OPEN_DOOR_B' typref='6'>
-<Attr>
-<Pos l='69' c='45' s='15'/>
-</Attr>
-</Id>
-</Exp_Comparison>
-</Nary_Pred>
-</Binary_Pred>
-<Binary_Pred op='=&gt;'>
-<Attr>
-<Pos l='72' c='40' s='2'/>
-</Attr>
-<Exp_Comparison op='='>
-<Attr>
-<Pos l='72' c='33' s='1'/>
-</Attr>
-<Id value='current_action' typref='4'>
-<Attr>
-<Pos l='72' c='18' s='14'/>
-</Attr>
-</Id>
-<Id value='NONE' typref='4'>
-<Attr>
-<Pos l='72' c='35' s='4'/>
-</Attr>
-</Id>
-</Exp_Comparison>
-<Exp_Comparison op='='>
-<Attr>
-<Pos l='73' c='43' s='1'/>
-</Attr>
-<Id value='current_objective' typref='6'>
-<Attr>
-<Pos l='73' c='25' s='17'/>
-</Attr>
-</Id>
-<Id value='OBJ_NONE' typref='6'>
-<Attr>
-<Pos l='73' c='45' s='8'/>
-</Attr>
-</Id>
-</Exp_Comparison>
-</Binary_Pred>
-<Binary_Pred op='=&gt;'>
-<Attr>
-<Pos l='76' c='54' s='2'/>
-</Attr>
-<Exp_Comparison op='='>
-<Attr>
-<Pos l='76' c='36' s='1'/>
-</Attr>
-<Id value='current_objective' typref='6'>
-<Attr>
-<Pos l='76' c='18' s='17'/>
-</Attr>
-</Id>
-<Id value='OBJ_OPEN_DOOR_A' typref='6'>
-<Attr>
-<Pos l='76' c='38' s='15'/>
-</Attr>
-</Id>
-</Exp_Comparison>
-<Nary_Pred op='&amp;'>
-<Exp_Comparison op='='>
-<Attr>
-<Pos l='77' c='42' s='1'/>
-</Attr>
-<Id value='contact_sensor_a' typref='0'>
-<Attr>
-<Pos l='77' c='25' s='16'/>
-</Attr>
-</Id>
-<Boolean_Literal value='TRUE' typref='0'>
-<Attr>
-<Pos l='77' c='44' s='4'/>
-</Attr>
-</Boolean_Literal>
-</Exp_Comparison>
-<Nary_Pred op='or'>
-<Exp_Comparison op='='>
-<Attr>
-<Pos l='79' c='50' s='1'/>
-</Attr>
-<Id value='button_room_a_open_a' typref='0'>
-<Attr>
-<Pos l='79' c='29' s='20'/>
-</Attr>
-</Id>
-<Boolean_Literal value='TRUE' typref='0'>
-<Attr>
-<Pos l='79' c='52' s='4'/>
-</Attr>
-</Boolean_Literal>
-</Exp_Comparison>
-<Exp_Comparison op='='>
-<Attr>
-<Pos l='80' c='42' s='1'/>
-</Attr>
-<Id value='button_room_l_open_a' typref='0'>
-<Attr>
-<Pos l='80' c='21' s='20'/>
-</Attr>
-</Id>
-<Boolean_Literal value='TRUE' typref='0'>
-<Attr>
-<Pos l='80' c='44' s='4'/>
-</Attr>
-</Boolean_Literal>
-</Exp_Comparison>
-</Nary_Pred>
-<Nary_Pred op='or'>
-<Exp_Comparison op='='>
-<Attr>
-<Pos l='83' c='52' s='1'/>
-</Attr>
-<Id value='current_authentication' typref='5'>
-<Attr>
-<Pos l='83' c='29' s='22'/>
-</Attr>
-</Id>
-<Id value='AUTHENTICATED_A' typref='5'>
-<Attr>
-<Pos l='83' c='54' s='15'/>
-</Attr>
-</Id>
-</Exp_Comparison>
-<Exp_Comparison op='='>
-<Attr>
-<Pos l='84' c='52' s='1'/>
-</Attr>
-<Id value='current_authentication' typref='5'>
-<Attr>
-<Pos l='84' c='29' s='22'/>
-</Attr>
-</Id>
-<Id value='AUTHENTICATED_L' typref='5'>
-<Attr>
-<Pos l='84' c='54' s='15'/>
-</Attr>
-</Id>
-</Exp_Comparison>
-</Nary_Pred>
-</Nary_Pred>
-</Binary_Pred>
-<Binary_Pred op='=&gt;'>
-<Attr>
-<Pos l='88' c='54' s='2'/>
-</Attr>
-<Exp_Comparison op='='>
-<Attr>
-<Pos l='88' c='36' s='1'/>
-</Attr>
-<Id value='current_objective' typref='6'>
-<Attr>
-<Pos l='88' c='18' s='17'/>
-</Attr>
-</Id>
-<Id value='OBJ_OPEN_DOOR_B' typref='6'>
-<Attr>
-<Pos l='88' c='38' s='15'/>
-</Attr>
-</Id>
-</Exp_Comparison>
-<Nary_Pred op='&amp;'>
-<Exp_Comparison op='='>
-<Attr>
-<Pos l='89' c='42' s='1'/>
-</Attr>
-<Id value='contact_sensor_b' typref='0'>
-<Attr>
-<Pos l='89' c='25' s='16'/>
-</Attr>
-</Id>
-<Boolean_Literal value='TRUE' typref='0'>
-<Attr>
-<Pos l='89' c='44' s='4'/>
-</Attr>
-</Boolean_Literal>
-</Exp_Comparison>
-<Nary_Pred op='or'>
-<Exp_Comparison op='='>
-<Attr>
-<Pos l='91' c='50' s='1'/>
-</Attr>
-<Id value='button_room_b_open_b' typref='0'>
-<Attr>
-<Pos l='91' c='29' s='20'/>
-</Attr>
-</Id>
-<Boolean_Literal value='TRUE' typref='0'>
-<Attr>
-<Pos l='91' c='52' s='4'/>
-</Attr>
-</Boolean_Literal>
-</Exp_Comparison>
-<Exp_Comparison op='='>
-<Attr>
-<Pos l='92' c='42' s='1'/>
-</Attr>
-<Id value='button_room_l_open_b' typref='0'>
-<Attr>
-<Pos l='92' c='21' s='20'/>
-</Attr>
-</Id>
-<Boolean_Literal value='TRUE' typref='0'>
-<Attr>
-<Pos l='92' c='44' s='4'/>
-</Attr>
-</Boolean_Literal>
-</Exp_Comparison>
-</Nary_Pred>
-<Nary_Pred op='or'>
-<Exp_Comparison op='='>
-<Attr>
-<Pos l='95' c='52' s='1'/>
-</Attr>
-<Id value='current_authentication' typref='5'>
-<Attr>
-<Pos l='95' c='29' s='22'/>
-</Attr>
-</Id>
-<Id value='AUTHENTICATED_B' typref='5'>
-<Attr>
-<Pos l='95' c='54' s='15'/>
-</Attr>
-</Id>
-</Exp_Comparison>
-<Exp_Comparison op='='>
-<Attr>
-<Pos l='96' c='52' s='1'/>
-</Attr>
-<Id value='current_authentication' typref='5'>
-<Attr>
-<Pos l='96' c='29' s='22'/>
-</Attr>
-</Id>
-<Id value='AUTHENTICATED_L' typref='5'>
-<Attr>
-<Pos l='96' c='54' s='15'/>
-</Attr>
-</Id>
-</Exp_Comparison>
-</Nary_Pred>
-</Nary_Pred>
-</Binary_Pred>
-<Binary_Pred op='=&gt;'>
-<Attr>
-<Pos l='99' c='51' s='2'/>
-</Attr>
-<Exp_Comparison op='='>
-<Attr>
-<Pos l='99' c='40' s='1'/>
-</Attr>
-<Id value='current_objective' typref='6'>
-<Attr>
-<Pos l='99' c='22' s='17'/>
-</Attr>
-</Id>
-<Id value='OBJ_NONE' typref='6'>
-<Attr>
-<Pos l='99' c='42' s='8'/>
-</Attr>
-</Id>
-</Exp_Comparison>
-<Nary_Pred op='&amp;'>
-<Exp_Comparison op='='>
-<Attr>
-<Pos l='100' c='46' s='1'/>
-</Attr>
-<Id value='button_room_a_open_a' typref='0'>
-<Attr>
-<Pos l='100' c='25' s='20'/>
-</Attr>
-</Id>
-<Boolean_Literal value='FALSE' typref='0'>
-<Attr>
-<Pos l='100' c='48' s='5'/>
-</Attr>
-</Boolean_Literal>
-</Exp_Comparison>
-<Exp_Comparison op='='>
-<Attr>
-<Pos l='101' c='38' s='1'/>
-</Attr>
-<Id value='button_room_l_open_a' typref='0'>
-<Attr>
-<Pos l='101' c='17' s='20'/>
-</Attr>
-</Id>
-<Boolean_Literal value='FALSE' typref='0'>
-<Attr>
-<Pos l='101' c='40' s='5'/>
-</Attr>
-</Boolean_Literal>
-</Exp_Comparison>
-<Exp_Comparison op='='>
-<Attr>
-<Pos l='102' c='38' s='1'/>
-</Attr>
-<Id value='button_room_l_open_b' typref='0'>
-<Attr>
-<Pos l='102' c='17' s='20'/>
-</Attr>
-</Id>
-<Boolean_Literal value='FALSE' typref='0'>
-<Attr>
-<Pos l='102' c='40' s='5'/>
-</Attr>
-</Boolean_Literal>
-</Exp_Comparison>
-<Exp_Comparison op='='>
-<Attr>
-<Pos l='103' c='38' s='1'/>
-</Attr>
-<Id value='button_room_b_open_b' typref='0'>
-<Attr>
-<Pos l='103' c='17' s='20'/>
-</Attr>
-</Id>
-<Boolean_Literal value='FALSE' typref='0'>
-<Attr>
-<Pos l='103' c='40' s='5'/>
-</Attr>
-</Boolean_Literal>
 </Exp_Comparison>
 </Nary_Pred>
 </Binary_Pred>

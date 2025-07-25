@@ -2,6 +2,14 @@
 REFINES test_CONTROLLER
 
 IMPORTS CTX , SENSORS , ENABLER , CONTROLLER
+
+INVARIANT
+    ( current_action = TRANSLATE_OPEN_DOOR_A => enable_door_a = TRUE ) &
+    ( current_action = TRANSLATE_OPEN_DOOR_B => enable_door_b = TRUE ) &
+
+    ( current_action = ADAPT_PRESSURE_L_TO_A => enable_door_a = FALSE ) &
+    ( current_action = ADAPT_PRESSURE_L_TO_B => enable_door_b = FALSE )
+
 OPERATIONS
     test_control =
     BEGIN
