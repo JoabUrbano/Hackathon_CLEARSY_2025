@@ -1,0 +1,36 @@
+IMPLEMENTATION MAIN_i
+REFINES MAIN
+    
+IMPORTS CTX, SENSORS, ENABLER, 
+    CONTROLLER_daniel, CONTROLLER_henrique
+CONCRETE_VARIABLES
+    action // The action executed after voting
+INVARIANT
+    action : ACTIONS
+INITIALISATION
+    action := NONE   
+OPERATIONS
+    operate =
+    VAR act_d, auth_d, obj_d, act_h, auth_h, obj_h IN
+        
+        update_sensors_states;
+        process_readers_henrique;
+        process_readers_daniel;
+        control_henrique;
+        control_daniel;
+        compute_enabling;
+
+        act_d, auth_d, obj_d <-- get_status_daniel;
+        act_h, auth_h, obj_h <-- get_status_henrique;
+        
+        IF
+            act_d = act_h &
+            auth_d = auth_h &
+            obj_d = obj_h
+        THEN
+            action := act_d
+        ELSE
+            action := NONE
+        END
+    END    
+END

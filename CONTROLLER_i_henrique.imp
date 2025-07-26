@@ -1,0 +1,97 @@
+IMPLEMENTATION CONTROLLER_i_henrique
+REFINES CONTROLLER_henrique  
+SEES
+    CTX, SENSORS, ENABLER
+    
+INITIALISATION
+    current_action_h := NONE;
+    current_authentication_h := AUTHENTICATED_NONE;
+    current_objective_h := OBJ_NONE
+    
+OPERATIONS
+    act, auth, obj <-- get_status_henrique =
+    BEGIN
+        act := current_action_h;
+        auth := current_authentication_h;
+        obj := current_objective_h
+    END;
+    
+    process_readers_henrique = 
+    IF current_authentication_h = AUTHENTICATED_NONE THEN
+        IF card_reader_a = TRUE THEN 
+            current_authentication_h := AUTHENTICATED_A 
+        ELSIF card_reader_b = TRUE THEN
+            current_authentication_h := AUTHENTICATED_B 
+        ELSIF card_reader_l = TRUE THEN
+            current_authentication_h := AUTHENTICATED_L
+        END       
+    END;   
+    
+    control_henrique =
+    BEGIN
+        IF current_objective_h = OBJ_OPEN_DOOR_A THEN
+            IF (pressure_sensor_l = PRESSURE_A &
+                    contact_sensor_b = TRUE & 
+                    contact_sensor_a = FALSE
+                )
+            THEN
+                current_objective_h := OBJ_NONE; current_action_h := NONE
+            ELSIF contact_sensor_b = FALSE THEN
+                current_action_h := TRANSLATE_CLOSE_DOOR_B
+            ELSIF contact_sensor_a = FALSE THEN
+                current_action_h := TRANSLATE_CLOSE_DOOR_A
+            ELSIF pressure_sensor_l /= PRESSURE_A THEN
+                current_action_h := ADAPT_PRESSURE_L_TO_A
+            ELSE
+                current_action_h := TRANSLATE_OPEN_DOOR_A
+            END
+        ELSIF current_objective_h = OBJ_OPEN_DOOR_B THEN
+            IF (pressure_sensor_l = PRESSURE_B &
+                    contact_sensor_b = FALSE & 
+                    contact_sensor_a = TRUE
+                )
+            THEN
+                current_objective_h := OBJ_NONE; current_action_h := NONE
+            ELSIF contact_sensor_a = FALSE THEN
+                current_action_h := TRANSLATE_CLOSE_DOOR_A
+            ELSIF contact_sensor_b = FALSE THEN
+                current_action_h := TRANSLATE_CLOSE_DOOR_B
+            ELSIF pressure_sensor_l /= PRESSURE_B THEN
+                current_action_h := ADAPT_PRESSURE_L_TO_B
+            ELSE
+                current_action_h := TRANSLATE_OPEN_DOOR_B
+            END
+        ELSE
+            IF (
+                    (current_authentication_h = AUTHENTICATED_A &
+                        button_room_a_open_a = TRUE
+                    ) or
+                    (current_authentication_h = AUTHENTICATED_L &
+                        button_room_l_open_a = TRUE
+                    )
+                )
+            THEN
+                current_objective_h := OBJ_OPEN_DOOR_A
+            ELSIF (
+                    (current_authentication_h = AUTHENTICATED_B &
+                        button_room_b_open_b = TRUE
+                    ) or
+                    (current_authentication_h = AUTHENTICATED_L &
+                        button_room_l_open_b = TRUE
+                    )
+                )
+            THEN
+                current_objective_h := OBJ_OPEN_DOOR_B
+            ELSE
+                IF contact_sensor_a = FALSE THEN
+                    current_action_h := TRANSLATE_CLOSE_DOOR_A
+                ELSIF contact_sensor_b = FALSE THEN
+                    current_action_h := TRANSLATE_CLOSE_DOOR_B
+                ELSE
+                    current_action_h := NONE
+                END
+            END
+            
+        END
+    END 
+END   

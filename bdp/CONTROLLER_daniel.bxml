@@ -1,0 +1,679 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Machine xmlns='https://www.atelierb.eu/Formats/bxml' version='1.0' name='CONTROLLER_daniel' type='abstraction' position='true' semantic='true' b0check='false'>
+<Sees>
+<Attr>
+<Pos l='3' c='1' s='4'/>
+</Attr>
+<Referenced_Machine>
+<Attr>
+<Pos l='4' c='5' s='3'/>
+</Attr>
+<Name>CTX</Name>
+</Referenced_Machine>
+<Referenced_Machine>
+<Attr>
+<Pos l='4' c='10' s='7'/>
+</Attr>
+<Name>SENSORS</Name>
+</Referenced_Machine>
+<Referenced_Machine>
+<Attr>
+<Pos l='4' c='19' s='7'/>
+</Attr>
+<Name>ENABLER</Name>
+</Referenced_Machine>
+</Sees>
+<Concrete_Variables>
+<Attr>
+<Pos l='5' c='1' s='18'/>
+</Attr>
+<Id value='current_action_d' typref='4'>
+<Attr>
+<Pos l='6' c='5' s='16'/>
+</Attr>
+</Id>
+<Id value='current_authentication_d' typref='5'>
+<Attr>
+<Pos l='7' c='5' s='24'/>
+</Attr>
+</Id>
+<Id value='current_objective_d' typref='6'>
+<Attr>
+<Pos l='8' c='5' s='19'/>
+</Attr>
+</Id>
+</Concrete_Variables>
+<Invariant>
+<Attr>
+<Pos l='9' c='1' s='9'/>
+</Attr>
+<Nary_Pred op='&amp;'>
+<Exp_Comparison op=':'>
+<Attr>
+<Pos l='10' c='22' s='1'/>
+</Attr>
+<Id value='current_action_d' typref='4'>
+<Attr>
+<Pos l='10' c='5' s='16'/>
+</Attr>
+</Id>
+<Id value='ACTIONS' typref='7'>
+<Attr>
+<Pos l='10' c='24' s='7'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op=':'>
+<Attr>
+<Pos l='11' c='29' s='1'/>
+</Attr>
+<Id value='current_authentication_d' typref='5'>
+<Attr>
+<Pos l='11' c='5' s='24'/>
+</Attr>
+</Id>
+<Id value='AUTHENTICATED' typref='8'>
+<Attr>
+<Pos l='11' c='31' s='13'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op=':'>
+<Attr>
+<Pos l='12' c='25' s='1'/>
+</Attr>
+<Id value='current_objective_d' typref='6'>
+<Attr>
+<Pos l='12' c='5' s='19'/>
+</Attr>
+</Id>
+<Id value='OBJECTIVES' typref='9'>
+<Attr>
+<Pos l='12' c='27' s='10'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+</Invariant>
+<Initialisation>
+<Attr>
+<Pos l='13' c='1' s='14'/>
+</Attr>
+<Nary_Sub op='||'>
+<Assignement_Sub>
+<Attr>
+<Pos l='14' c='22' s='2'/>
+</Attr>
+<Variables>
+<Id value='current_action_d' typref='4'>
+<Attr>
+<Pos l='14' c='5' s='16'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Id value='NONE' typref='4'>
+<Attr>
+<Pos l='14' c='25' s='4'/>
+</Attr>
+</Id>
+</Values>
+</Assignement_Sub>
+<Assignement_Sub>
+<Attr>
+<Pos l='15' c='30' s='2'/>
+</Attr>
+<Variables>
+<Id value='current_authentication_d' typref='5'>
+<Attr>
+<Pos l='15' c='5' s='24'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Id value='AUTHENTICATED_NONE' typref='5'>
+<Attr>
+<Pos l='15' c='33' s='18'/>
+</Attr>
+</Id>
+</Values>
+</Assignement_Sub>
+<Assignement_Sub>
+<Attr>
+<Pos l='16' c='25' s='2'/>
+</Attr>
+<Variables>
+<Id value='current_objective_d' typref='6'>
+<Attr>
+<Pos l='16' c='5' s='19'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Id value='OBJ_NONE' typref='6'>
+<Attr>
+<Pos l='16' c='28' s='8'/>
+</Attr>
+</Id>
+</Values>
+</Assignement_Sub>
+</Nary_Sub>
+</Initialisation>
+<Operations>
+<Operation name='get_status_daniel'>
+<Attr>
+<Pos l='18' c='5' s='3' endLine='23'/>
+</Attr>
+<Output_Parameters>
+<Id value='act' typref='4'>
+<Attr>
+<Pos l='18' c='5' s='3'/>
+</Attr>
+</Id>
+<Id value='auth' typref='5'>
+<Attr>
+<Pos l='18' c='10' s='4'/>
+</Attr>
+</Id>
+<Id value='obj' typref='6'>
+<Attr>
+<Pos l='18' c='16' s='3'/>
+</Attr>
+</Id>
+</Output_Parameters>
+<Body>
+<Nary_Sub op='||'>
+<Assignement_Sub>
+<Attr>
+<Pos l='20' c='13' s='2'/>
+</Attr>
+<Variables>
+<Id value='act' typref='4'>
+<Attr>
+<Pos l='20' c='9' s='3'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Id value='current_action_d' typref='4'>
+<Attr>
+<Pos l='20' c='16' s='16'/>
+</Attr>
+</Id>
+</Values>
+</Assignement_Sub>
+<Assignement_Sub>
+<Attr>
+<Pos l='21' c='14' s='2'/>
+</Attr>
+<Variables>
+<Id value='auth' typref='5'>
+<Attr>
+<Pos l='21' c='9' s='4'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Id value='current_authentication_d' typref='5'>
+<Attr>
+<Pos l='21' c='17' s='24'/>
+</Attr>
+</Id>
+</Values>
+</Assignement_Sub>
+<Assignement_Sub>
+<Attr>
+<Pos l='22' c='13' s='2'/>
+</Attr>
+<Variables>
+<Id value='obj' typref='6'>
+<Attr>
+<Pos l='22' c='9' s='3'/>
+</Attr>
+</Id>
+</Variables>
+<Values>
+<Id value='current_objective_d' typref='6'>
+<Attr>
+<Pos l='22' c='16' s='19'/>
+</Attr>
+</Id>
+</Values>
+</Assignement_Sub>
+</Nary_Sub>
+</Body>
+</Operation>
+<Operation name='process_readers_daniel'>
+<Attr>
+<Pos l='25' c='5' s='22' endLine='32'/>
+</Attr>
+<Body>
+<Becomes_Such_That>
+<Attr>
+<Pos l='27' c='33' s='1'/>
+</Attr>
+<Variables>
+<Id value='current_authentication_d' typref='5'>
+<Attr>
+<Pos l='27' c='9' s='24'/>
+</Attr>
+</Id>
+</Variables>
+<Pred>
+<Nary_Pred op='&amp;'>
+<Exp_Comparison op=':'>
+<Attr>
+<Pos l='28' c='37' s='1'/>
+</Attr>
+<Id value='current_authentication_d' typref='5'>
+<Attr>
+<Pos l='28' c='13' s='24'/>
+</Attr>
+</Id>
+<Id value='AUTHENTICATED' typref='8'>
+<Attr>
+<Pos l='28' c='39' s='13'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Binary_Pred op='=&gt;'>
+<Attr>
+<Pos l='29' c='65' s='2'/>
+</Attr>
+<Unary_Pred op='not'>
+<Attr>
+<Pos l='29' c='14' s='3'/>
+</Attr>
+<Exp_Comparison op='='>
+<Attr>
+<Pos l='29' c='43' s='1'/>
+</Attr>
+<Id value='current_authentication_d' typref='5'>
+<Attr>
+<Pos l='29' c='18' s='24'/>
+</Attr>
+</Id>
+<Id value='AUTHENTICATED_NONE' typref='5'>
+<Attr>
+<Pos l='29' c='45' s='18'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Unary_Pred>
+<Exp_Comparison op=':'>
+<Attr>
+<Pos l='30' c='44' s='1'/>
+</Attr>
+<Id value='current_authentication_d' suffix='0' typref='5'>
+<Attr>
+<Pos l='30' c='17' s='26'/>
+</Attr>
+</Id>
+<Nary_Exp op='{' typref='8'>
+<Attr>
+<Pos l='30' c='45' s='1'/>
+</Attr>
+<Id value='AUTHENTICATED_NONE' typref='5'>
+<Attr>
+<Pos l='30' c='46' s='18'/>
+</Attr>
+</Id>
+<Id value='current_authentication_d' typref='5'>
+<Attr>
+<Pos l='30' c='66' s='24'/>
+</Attr>
+</Id>
+</Nary_Exp>
+</Exp_Comparison>
+</Binary_Pred>
+</Nary_Pred>
+</Pred>
+</Becomes_Such_That>
+</Body>
+</Operation>
+<Operation name='control_daniel'>
+<Attr>
+<Pos l='34' c='5' s='14' endLine='61'/>
+</Attr>
+<Body>
+<Becomes_Such_That>
+<Attr>
+<Pos l='37' c='29' s='1'/>
+</Attr>
+<Variables>
+<Id value='current_action_d' typref='4'>
+<Attr>
+<Pos l='36' c='9' s='16'/>
+</Attr>
+</Id>
+<Id value='current_objective_d' typref='6'>
+<Attr>
+<Pos l='37' c='9' s='19'/>
+</Attr>
+</Id>
+</Variables>
+<Pred>
+<Nary_Pred op='&amp;'>
+<Exp_Comparison op=':'>
+<Attr>
+<Pos l='38' c='29' s='1'/>
+</Attr>
+<Id value='current_action_d' typref='4'>
+<Attr>
+<Pos l='38' c='13' s='16'/>
+</Attr>
+</Id>
+<Id value='ACTIONS' typref='7'>
+<Attr>
+<Pos l='38' c='31' s='7'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op=':'>
+<Attr>
+<Pos l='39' c='33' s='1'/>
+</Attr>
+<Id value='current_objective_d' typref='6'>
+<Attr>
+<Pos l='39' c='13' s='19'/>
+</Attr>
+</Id>
+<Id value='OBJECTIVES' typref='9'>
+<Attr>
+<Pos l='39' c='35' s='10'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Binary_Pred op='=&gt;'>
+<Attr>
+<Pos l='41' c='55' s='2'/>
+</Attr>
+<Exp_Comparison op='='>
+<Attr>
+<Pos l='41' c='31' s='1'/>
+</Attr>
+<Id value='current_action_d' typref='4'>
+<Attr>
+<Pos l='41' c='14' s='16'/>
+</Attr>
+</Id>
+<Id value='TRANSLATE_OPEN_DOOR_A' typref='4'>
+<Attr>
+<Pos l='41' c='33' s='21'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Nary_Pred op='&amp;'>
+<Exp_Comparison op='='>
+<Attr>
+<Pos l='42' c='35' s='1'/>
+</Attr>
+<Id value='pressure_sensor_l' typref='10'>
+<Attr>
+<Pos l='42' c='17' s='17'/>
+</Attr>
+</Id>
+<Id value='PRESSURE_A' typref='10'>
+<Attr>
+<Pos l='42' c='37' s='10'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op='='>
+<Attr>
+<Pos l='42' c='67' s='1'/>
+</Attr>
+<Id value='contact_sensor_b' typref='0'>
+<Attr>
+<Pos l='42' c='50' s='16'/>
+</Attr>
+</Id>
+<Boolean_Literal value='TRUE' typref='0'>
+<Attr>
+<Pos l='42' c='69' s='4'/>
+</Attr>
+</Boolean_Literal>
+</Exp_Comparison>
+</Nary_Pred>
+</Binary_Pred>
+<Binary_Pred op='=&gt;'>
+<Attr>
+<Pos l='45' c='55' s='2'/>
+</Attr>
+<Exp_Comparison op='='>
+<Attr>
+<Pos l='45' c='31' s='1'/>
+</Attr>
+<Id value='current_action_d' typref='4'>
+<Attr>
+<Pos l='45' c='14' s='16'/>
+</Attr>
+</Id>
+<Id value='TRANSLATE_OPEN_DOOR_B' typref='4'>
+<Attr>
+<Pos l='45' c='33' s='21'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Nary_Pred op='&amp;'>
+<Exp_Comparison op='='>
+<Attr>
+<Pos l='46' c='35' s='1'/>
+</Attr>
+<Id value='pressure_sensor_l' typref='10'>
+<Attr>
+<Pos l='46' c='17' s='17'/>
+</Attr>
+</Id>
+<Id value='PRESSURE_B' typref='10'>
+<Attr>
+<Pos l='46' c='37' s='10'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Exp_Comparison op='='>
+<Attr>
+<Pos l='46' c='67' s='1'/>
+</Attr>
+<Id value='contact_sensor_a' typref='0'>
+<Attr>
+<Pos l='46' c='50' s='16'/>
+</Attr>
+</Id>
+<Boolean_Literal value='TRUE' typref='0'>
+<Attr>
+<Pos l='46' c='69' s='4'/>
+</Attr>
+</Boolean_Literal>
+</Exp_Comparison>
+</Nary_Pred>
+</Binary_Pred>
+<Binary_Pred op='=&gt;'>
+<Attr>
+<Pos l='49' c='55' s='2'/>
+</Attr>
+<Exp_Comparison op='='>
+<Attr>
+<Pos l='49' c='31' s='1'/>
+</Attr>
+<Id value='current_action_d' typref='4'>
+<Attr>
+<Pos l='49' c='14' s='16'/>
+</Attr>
+</Id>
+<Id value='ADAPT_PRESSURE_L_TO_A' typref='4'>
+<Attr>
+<Pos l='49' c='33' s='21'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Nary_Pred op='&amp;'>
+<Exp_Comparison op='='>
+<Attr>
+<Pos l='50' c='34' s='1'/>
+</Attr>
+<Id value='contact_sensor_a' typref='0'>
+<Attr>
+<Pos l='50' c='17' s='16'/>
+</Attr>
+</Id>
+<Boolean_Literal value='TRUE' typref='0'>
+<Attr>
+<Pos l='50' c='36' s='4'/>
+</Attr>
+</Boolean_Literal>
+</Exp_Comparison>
+<Exp_Comparison op='='>
+<Attr>
+<Pos l='51' c='34' s='1'/>
+</Attr>
+<Id value='contact_sensor_b' typref='0'>
+<Attr>
+<Pos l='51' c='17' s='16'/>
+</Attr>
+</Id>
+<Boolean_Literal value='TRUE' typref='0'>
+<Attr>
+<Pos l='51' c='36' s='4'/>
+</Attr>
+</Boolean_Literal>
+</Exp_Comparison>
+<Exp_Comparison op='/='>
+<Attr>
+<Pos l='52' c='35' s='2'/>
+</Attr>
+<Id value='pressure_sensor_l' typref='10'>
+<Attr>
+<Pos l='52' c='17' s='17'/>
+</Attr>
+</Id>
+<Id value='PRESSURE_A' typref='10'>
+<Attr>
+<Pos l='52' c='38' s='10'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+</Binary_Pred>
+<Binary_Pred op='=&gt;'>
+<Attr>
+<Pos l='55' c='55' s='2'/>
+</Attr>
+<Exp_Comparison op='='>
+<Attr>
+<Pos l='55' c='31' s='1'/>
+</Attr>
+<Id value='current_action_d' typref='4'>
+<Attr>
+<Pos l='55' c='14' s='16'/>
+</Attr>
+</Id>
+<Id value='ADAPT_PRESSURE_L_TO_B' typref='4'>
+<Attr>
+<Pos l='55' c='33' s='21'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+<Nary_Pred op='&amp;'>
+<Exp_Comparison op='='>
+<Attr>
+<Pos l='56' c='34' s='1'/>
+</Attr>
+<Id value='contact_sensor_a' typref='0'>
+<Attr>
+<Pos l='56' c='17' s='16'/>
+</Attr>
+</Id>
+<Boolean_Literal value='TRUE' typref='0'>
+<Attr>
+<Pos l='56' c='36' s='4'/>
+</Attr>
+</Boolean_Literal>
+</Exp_Comparison>
+<Exp_Comparison op='='>
+<Attr>
+<Pos l='57' c='34' s='1'/>
+</Attr>
+<Id value='contact_sensor_b' typref='0'>
+<Attr>
+<Pos l='57' c='17' s='16'/>
+</Attr>
+</Id>
+<Boolean_Literal value='TRUE' typref='0'>
+<Attr>
+<Pos l='57' c='36' s='4'/>
+</Attr>
+</Boolean_Literal>
+</Exp_Comparison>
+<Exp_Comparison op='/='>
+<Attr>
+<Pos l='58' c='35' s='2'/>
+</Attr>
+<Id value='pressure_sensor_l' typref='10'>
+<Attr>
+<Pos l='58' c='17' s='17'/>
+</Attr>
+</Id>
+<Id value='PRESSURE_B' typref='10'>
+<Attr>
+<Pos l='58' c='38' s='10'/>
+</Attr>
+</Id>
+</Exp_Comparison>
+</Nary_Pred>
+</Binary_Pred>
+</Nary_Pred>
+</Pred>
+</Becomes_Such_That>
+</Body>
+</Operation>
+</Operations>
+<TypeInfos>
+<Type id='0'>
+<Id value='BOOL'/>
+</Type>
+<Type id='1'>
+<Id value='INTEGER'/>
+</Type>
+<Type id='2'>
+<Unary_Exp op='POW'>
+<Id value='INTEGER'/>
+</Unary_Exp>
+</Type>
+<Type id='3'>
+<Unary_Exp op='POW'>
+<Unary_Exp op='POW'>
+<Id value='INTEGER'/>
+</Unary_Exp>
+</Unary_Exp>
+</Type>
+<Type id='4'>
+<Id value='ACTIONS'/>
+</Type>
+<Type id='5'>
+<Id value='AUTHENTICATED'/>
+</Type>
+<Type id='6'>
+<Id value='OBJECTIVES'/>
+</Type>
+<Type id='7'>
+<Unary_Exp op='POW'>
+<Id value='ACTIONS'/>
+</Unary_Exp>
+</Type>
+<Type id='8'>
+<Unary_Exp op='POW'>
+<Id value='AUTHENTICATED'/>
+</Unary_Exp>
+</Type>
+<Type id='9'>
+<Unary_Exp op='POW'>
+<Id value='OBJECTIVES'/>
+</Unary_Exp>
+</Type>
+<Type id='10'>
+<Id value='PRESSURES'/>
+</Type>
+</TypeInfos>
+
+</Machine>

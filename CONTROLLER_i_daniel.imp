@@ -1,0 +1,139 @@
+IMPLEMENTATION CONTROLLER_i_daniel
+REFINES CONTROLLER_daniel
+   
+    
+SEES
+    CTX, SENSORS, ENABLER
+    
+INITIALISATION
+    current_action_d := NONE;
+    current_authentication_d := AUTHENTICATED_NONE;
+    current_objective_d := OBJ_NONE
+    
+OPERATIONS
+    act, auth, obj <-- get_status_daniel =
+    BEGIN
+        act := current_action_d;
+        auth := current_authentication_d;
+        obj := current_objective_d
+    END;
+    
+    process_readers_daniel =
+    BEGIN
+        //Since I may change the values of current_authentication and I am also consulting this value it`s safer to store the previous value of authentication and use this variable for consulting
+        VAR previous_authentication IN
+            previous_authentication := current_authentication_d;
+            IF current_authentication_d = AUTHENTICATED_NONE THEN
+                IF card_reader_a = TRUE THEN
+                    current_authentication_d := AUTHENTICATED_A
+                ELSIF card_reader_b = TRUE THEN
+                    current_authentication_d := AUTHENTICATED_B
+                ELSIF card_reader_l = TRUE THEN
+                    current_authentication_d := AUTHENTICATED_L
+                END
+                
+                // If the current action is OPEN_DOOR it means that the objective is complete, or will be completed when the DOOR actually finish to open, therefore the authentication is not needed anymore and can be set to AUTHENTICATED_NONE
+            ELSE
+                IF 
+                    current_action_d = TRANSLATE_OPEN_DOOR_A
+                    or current_action_d = TRANSLATE_OPEN_DOOR_B
+                THEN
+                    current_authentication_d := AUTHENTICATED_NONE
+                END
+            END
+        END
+    END;
+    
+    
+    control_daniel =
+    BEGIN
+        //Since I may change the values of current_action and current_objective, and I am also consulting this values it`s safer to store the previous value of action and objective, and use this variables for consulting
+        VAR previous_action, previous_objective
+        IN
+            previous_action := current_action_d;
+            previous_objective := current_objective_d;
+            
+            //1. Define current_action
+            CASE previous_objective OF
+                EITHER OBJ_OPEN_DOOR_A THEN
+                    
+                    //DOOR_A is already open no action is needed
+                    IF contact_sensor_a = FALSE THEN
+                        current_action_d := NONE
+                        
+                        
+                    ELSIF contact_sensor_b = FALSE THEN
+                        current_action_d := TRANSLATE_CLOSE_DOOR_B
+                        
+                        //DOOR_B and DOOR_A are closed so the pressure can change
+                    ELSIF pressure_sensor_l /= PRESSURE_A THEN 
+                        current_action_d := ADAPT_PRESSURE_L_TO_A
+                        
+                        //DOOR_B is close and pressure is PRESSURE_A
+                    ELSE 
+                        current_action_d := TRANSLATE_OPEN_DOOR_A
+                    END      
+                OR OBJ_OPEN_DOOR_B THEN
+                    
+                    //DOOR_B is already open no action is needed
+                    IF contact_sensor_b = FALSE THEN
+                        current_action_d := NONE 
+                        
+                    ELSIF contact_sensor_a = FALSE THEN
+                        current_action_d := TRANSLATE_CLOSE_DOOR_A
+                        
+                        //DOOR_A and DOOR_B are closed so the pressure can change
+                    ELSIF pressure_sensor_l /= PRESSURE_B THEN 
+                        current_action_d := ADAPT_PRESSURE_L_TO_B
+                        
+                        //DOOR_A is close and pressure is PRESSURE_B   
+                    ELSE 
+                        current_action_d := TRANSLATE_OPEN_DOOR_B
+                    END 
+                ELSE //OBJ_NONE
+                    skip
+                END
+            END;
+            
+            //2. Define current_objective
+            IF previous_objective = OBJ_NONE THEN
+                CASE current_authentication_d OF
+                    EITHER AUTHENTICATED_A THEN
+                        IF button_room_a_open_a = TRUE THEN
+                            current_objective_d := OBJ_OPEN_DOOR_A
+                        END
+                    OR AUTHENTICATED_B THEN
+                        IF button_room_b_open_b = TRUE THEN
+                            current_objective_d := OBJ_OPEN_DOOR_B
+                        END 
+                    OR AUTHENTICATED_L THEN
+                        //if the two buttons of the airlock are pressed at the same time the DOOR_A has the preference
+                        IF button_room_l_open_a = TRUE THEN 
+                            current_objective_d := OBJ_OPEN_DOOR_A
+                        ELSIF button_room_l_open_b = TRUE THEN
+                            current_objective_d := OBJ_OPEN_DOOR_B
+                        END 
+                    ELSE // AUTHENTICATED_NONE
+                        skip
+                    END
+                END
+                
+            ELSE //3. complete the current_objective
+                IF (previous_objective = OBJ_OPEN_DOOR_A
+                        & contact_sensor_a = FALSE
+                    )
+                    or (previous_objective = OBJ_OPEN_DOOR_B
+                        & contact_sensor_b = FALSE
+                    )
+                THEN 
+                    current_objective_d := OBJ_NONE
+                END         
+                
+            END // END of IF
+            
+            
+            
+        END  
+    END    
+    
+END

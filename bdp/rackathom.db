@@ -3,6 +3,7 @@
     <atelierb version="3_7_ubuntu-cvs" />
     <project decomp_dir="C:\Users\Joab\Desktop\rackathom\bdp\expand_src" old_decomp_dir="C:\Users\Joab\Desktop\rackathom\bdp\src">
         <!-- Definition directory list -->
+        <definition_dir path="C:\Users\Joab\Desktop\Rackathon dia 05" />
         <!-- Proof mechanisms -->
         <!-- Component file list -->
         <component_file path="C:/Users/Joab/Desktop/rackathom" name="ACCES_CARD" suffix="mch" user="Joab">
@@ -11,14 +12,32 @@
         <component_file path="C:/Users/Joab/Desktop/rackathom" name="CONTROLLER" suffix="mch" user="Joab">
             <component name="CONTROLLER" type="specification" />
         </component_file>
+        <component_file path="C:\Users\Joab\Desktop\Rackathon dia 05" name="CONTROLLER_daniel" suffix="mch" user="Joab">
+            <component name="CONTROLLER_daniel" type="specification" />
+        </component_file>
+        <component_file path="C:\Users\Joab\Desktop\Rackathon dia 05" name="CONTROLLER_henrique" suffix="mch" user="Joab">
+            <component name="CONTROLLER_henrique" type="specification" />
+        </component_file>
         <component_file path="C:/Users/Joab/Desktop/rackathom" name="CONTROLLER_i" suffix="imp" user="Joab">
             <component name="CONTROLLER_i" type="implementation" />
+        </component_file>
+        <component_file path="C:/Users/Joab/Desktop/rackathom" name="CONTROLLER_i_daniel" suffix="imp" user="Joab">
+            <component name="CONTROLLER_i_daniel" type="implementation" />
+        </component_file>
+        <component_file path="C:/Users/Joab/Desktop/rackathom" name="CONTROLLER_i_henrique" suffix="imp" user="Joab">
+            <component name="CONTROLLER_i_henrique" type="implementation" />
         </component_file>
         <component_file path="C:/Users/Joab/Desktop/rackathom" name="CTX" suffix="mch" user="Joab">
             <component name="CTX" type="specification" />
         </component_file>
         <component_file path="C:/Users/Joab/Desktop/rackathom" name="ENABLER" suffix="mch" user="Joab">
             <component name="ENABLER" type="specification" />
+        </component_file>
+        <component_file path="C:/Users/Joab/Desktop/rackathom" name="MAIN" suffix="mch" user="Joab">
+            <component name="MAIN" type="specification" />
+        </component_file>
+        <component_file path="C:/Users/Joab/Desktop/rackathom" name="MAIN_i" suffix="imp" user="Joab">
+            <component name="MAIN_i" type="implementation" />
         </component_file>
         <component_file path="C:/Users/Joab/Desktop/rackathom" name="SENSORS" suffix="mch" user="Joab">
             <component name="SENSORS" type="specification" />
